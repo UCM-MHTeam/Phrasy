@@ -3,26 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
+		312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */; };
+		31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */; };
 		9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918200D261AE00F0084CA33 /* AppDelegate.swift */; };
 		99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918200F261AE00F0084CA33 /* SceneDelegate.swift */; };
-		99182012261AE00F0084CA33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99182011261AE00F0084CA33 /* ViewController.swift */; };
 		99182015261AE00F0084CA33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99182013261AE00F0084CA33 /* Main.storyboard */; };
 		99182017261AE0140084CA33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99182016261AE0140084CA33 /* Assets.xcassets */; };
 		9918201A261AE0140084CA33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99182018261AE0140084CA33 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseEngineViewController.swift; sourceTree = "<group>"; };
 		63768546924F9025BA8AB497 /* Pods_Phrasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phrasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7473B7F3E8BC4E387E339B50 /* Pods-Phrasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phrasy.debug.xcconfig"; path = "Target Support Files/Pods-Phrasy/Pods-Phrasy.debug.xcconfig"; sourceTree = "<group>"; };
 		9918200A261AE00F0084CA33 /* Phrasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phrasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9918200D261AE00F0084CA33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9918200F261AE00F0084CA33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99182011261AE00F0084CA33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99182014261AE00F0084CA33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99182016261AE0140084CA33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99182019261AE0140084CA33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,13 +44,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31E9D66B261AED3C00BA6D6A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31E9D670261AEDB200BA6D6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4119A8937090DEA544A6B1FD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7473B7F3E8BC4E387E339B50 /* Pods-Phrasy.debug.xcconfig */,
 				A89C55CDDE93288CF707E59C /* Pods-Phrasy.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,9 +90,10 @@
 		9918200C261AE00F0084CA33 /* Phrasy */ = {
 			isa = PBXGroup;
 			children = (
+				31E9D670261AEDB200BA6D6A /* Models */,
+				31E9D66B261AED3C00BA6D6A /* ViewControllers */,
 				9918200D261AE00F0084CA33 /* AppDelegate.swift */,
 				9918200F261AE00F0084CA33 /* SceneDelegate.swift */,
-				99182011261AE00F0084CA33 /* ViewController.swift */,
 				99182013261AE00F0084CA33 /* Main.storyboard */,
 				99182016261AE0140084CA33 /* Assets.xcassets */,
 				99182018261AE0140084CA33 /* LaunchScreen.storyboard */,
@@ -206,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99182012261AE00F0084CA33 /* ViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
+				312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */,
+				31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */,
 				99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
