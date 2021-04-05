@@ -91,8 +91,107 @@ First Draft
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+
+Person
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| objectId | String   | unique id for user     |
+| userName | String   | name of user |
+| userImage | String  | image of user |
+| friends  | Array    | list of person objects |
+| UpdateCell | Pointer to another Parse Object | mood update |
+
+
+UpdateCell
+| Property 1 | Type 2 | Description 3 |
+| -------- | -------- | -------- |
+| objectId     | String     | unique id for the the user status     |
+| userImage | Pointer to User | image user |
+| userName  | Pointer to User | name of user |
+| moodString | String | current mood description|
+| moodColor | String | current visual of mood |
+
+<!-- Profile -->
+<!-- TBD -->
+
+
 ### Networking
-- [Add list of network requests by screen ]
+<!-- - [ List of Network Requests by Screen ] -->
+- Login Screen
+    - (READ) Fetch user account
+        ```
+        let username = usernameField.text!
+                let password = passwordField.text!
+                PFUser.logInWithUsername(inBackground: username, password: password){
+                    (user, error) in
+                    if user != nil {
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    }else{
+                        print("Error: \(error?.localizedDescription)");
+                    }
+                }
+        ```
+- Sign Up Screen
+    - (POST) Creat new user
+        ```
+         let user = PFUser()
+                user.username = usernameField.text
+                user.password = passwordField.text
+                user.email = emailField.text PFObject
+                user["phone"] = phoneNumField.text
+                user["friends"] = [PFObject]()    //nil initially because no friends
+                user.signUpInBackground { (success, error) in
+                    if success {
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    }else{
+                        print("Error: \(error?.localizedDescription)");
+                    }
+                }
+        ```
+- Feed
+    - (Read/GET) Query all of user updates for collection view
+        ```
+        //var upCells = [PFObject]()    //take into account
+        let query = PFQuery(className:"friends","UpdateCell.friends")
+                query.includeKeys(["userName", "userImage","moodString","moodColor",
+                    "userImage.userName","moodString.userName","moodColor.userName"])
+                query.limit = 20        //Temporary limit 20 but should # of friends
+
+                query.findObjectsInBackground { (upCells, error) in
+                    if upCells != nil{
+                        self.posts = upCells!
+                        self.tableView.reloadData()   //TB -> CV
+                    }
+                }
+        ```
+- Friend Search
+    - (Read/Get) Query users with **EXACT** username
+        ```
+        var people = [PFObject]()
+        let query = PFQuery(className:"Person")
+                query.includeKeys(["userName"])
+                query.limit = 1        //**EXACT username***
+
+                query.findObjectsInBackground { (Person, error) in
+                    if Person != nil{
+                        self.people = Person!
+                        self.tableView.reloadData()   
+                    }
+                }
+
+        ```
+    - (Update/PUT) Add a new friend to current user
+        ```
+            let allUsers = PFQuery(className: "Person")
+            allUsers.findObjectsInBackground { (Person, error)
+                if Person != nil{
+
+                user.addUniqueObjects(from: ***Unique ID***)
+                }
+            }
+
+        ```
+<!-- - [**Opt**] Profile
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+ -->
