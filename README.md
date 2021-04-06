@@ -2,9 +2,10 @@
 
 ## Table of Contents
 1. [Overview](#Overview)
-1. [Product Spec](#Product-Spec)
-1. [Wireframes](#Wireframes)
-2. [Schema](#Schema)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema](#Schema)
+5. [Progress](#Progress)
 
 ## Overview
 ### Description
@@ -74,9 +75,9 @@ Mental health and mental illness can be tough to deal with, especially when comm
 * **[Opt]** Feed <-> user profiles/stats
 
 ## Wireframes
-First Draft
-<img src="" width=600>
-![](https://i.imgur.com/Ujfhr04.jpg)
+
+### First Draft
+![](https://i.imgur.com/Ujfhr04.jpg) </img>
 
 ### [BONUS] Digital Wireframes & Mockups ([Figma Link](https://www.figma.com/file/0RJG7CmvWGkx2tHmbDKAQ8/CodePath-iOS-MH-App?node-id=0%3A1))
 > Below the Message frame, we plan on implementing there a form that can take the user's current feeling/intention and creates a phrase to be sent out.
@@ -233,3 +234,9 @@ query.findObjectsInBackground { (upCells, error) in
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
  -->
+
+## Progress
+
+**Milestone #1**: Phrase Engine (to be continued to next milestone)
+
+![](https://i.imgur.com/4qUmTsJ.gif)
