@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,84 +27,59 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="101" id="rDv-QE-XTn" customClass="QuestionCell" customModule="Phrasy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="101"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="127" id="rDv-QE-XTn" customClass="QuestionCell" customModule="Phrasy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rDv-QE-XTn" id="4ru-Xc-4xO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oY-c0-Woa" userLabel="I">
-                                                    <rect key="frame" x="16" y="10" width="349" height="31"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="6ST-Q2-oFo"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oY-c0-Woa" userLabel="QuestionLabel">
+                                                    <rect key="frame" x="16" y="10" width="349" height="33"/>
                                                     <fontDescription key="fontDescription" name="CatamaranRoman-Bold" family="Catamaran" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="598-dg-7l5">
-                                                    <rect key="frame" x="30" y="56" width="56" height="30"/>
-                                                    <state key="normal" title="ButtonA">
-                                                        <color key="titleColor" systemColor="systemRedColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="buttonA:" destination="rDv-QE-XTn" eventType="touchUpInside" id="xZK-RG-7xo"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-KT-jes">
-                                                    <rect key="frame" x="107" y="56" width="56" height="30"/>
-                                                    <state key="normal" title="ButtonB">
-                                                        <color key="titleColor" systemColor="systemRedColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="buttonB:" destination="rDv-QE-XTn" eventType="touchUpInside" id="HVh-QB-Zpn"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KB6-SE-AZc" userLabel="ButtonD">
-                                                    <rect key="frame" x="273" y="56" width="57" height="30"/>
-                                                    <state key="normal" title="ButtonC">
-                                                        <color key="titleColor" systemColor="systemRedColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="buttonD:" destination="rDv-QE-XTn" eventType="touchUpInside" id="tmv-d1-MRI"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkx-jP-f8U">
-                                                    <rect key="frame" x="195" y="56" width="57" height="30"/>
-                                                    <state key="normal" title="ButtonC">
-                                                        <color key="titleColor" systemColor="systemRedColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="buttonC:" destination="rDv-QE-XTn" eventType="touchUpInside" id="1LR-oj-HD5"/>
-                                                    </connections>
-                                                </button>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeB-pz-Skr">
+                                                    <rect key="frame" x="0.0" y="57" width="375" height="70"/>
+                                                    <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="FBu-Bq-JhQ"/>
+                                                        <constraint firstAttribute="width" constant="375" id="Qhb-ho-seS"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RuC-aS-TfV">
+                                                        <size key="itemSize" width="70" height="70"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnswerChoiceCell" id="5zC-Ec-22c" customClass="AnswerChoiceCell" customModule="Phrasy" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BBe-iF-j70">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </collectionViewCellContentView>
+                                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                            <size key="customSize" width="100" height="70"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="598-dg-7l5" firstAttribute="leading" secondItem="4ru-Xc-4xO" secondAttribute="leading" constant="30" id="01F-Cz-N43"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="598-dg-7l5" secondAttribute="bottom" constant="15" id="1AW-lC-fJC"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NHD-KT-jes" secondAttribute="bottom" constant="15" id="1O9-UV-IQy"/>
-                                                <constraint firstItem="KB6-SE-AZc" firstAttribute="top" secondItem="9oY-c0-Woa" secondAttribute="bottom" constant="15" id="4yJ-qP-OLq"/>
                                                 <constraint firstAttribute="trailing" secondItem="9oY-c0-Woa" secondAttribute="trailing" constant="10" id="7Dl-0B-ixk"/>
-                                                <constraint firstItem="vkx-jP-f8U" firstAttribute="top" secondItem="9oY-c0-Woa" secondAttribute="bottom" constant="15" id="7Xj-oB-cbg"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KB6-SE-AZc" secondAttribute="bottom" constant="15" id="B0o-QC-2LL"/>
+                                                <constraint firstItem="MeB-pz-Skr" firstAttribute="leading" secondItem="4ru-Xc-4xO" secondAttribute="leading" id="B9p-Ol-apJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="MeB-pz-Skr" secondAttribute="bottom" id="ELD-Wg-bW8"/>
+                                                <constraint firstAttribute="trailing" secondItem="MeB-pz-Skr" secondAttribute="trailing" id="GnN-gi-cD6"/>
                                                 <constraint firstItem="9oY-c0-Woa" firstAttribute="leading" secondItem="4ru-Xc-4xO" secondAttribute="leading" constant="16" id="O8m-D9-xbP"/>
-                                                <constraint firstItem="598-dg-7l5" firstAttribute="top" secondItem="9oY-c0-Woa" secondAttribute="bottom" constant="15" id="QKc-CO-gYc"/>
-                                                <constraint firstItem="vkx-jP-f8U" firstAttribute="leading" secondItem="NHD-KT-jes" secondAttribute="trailing" constant="15" id="T8D-PM-ODf"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vkx-jP-f8U" secondAttribute="bottom" constant="15" id="ZSM-3A-kkc"/>
-                                                <constraint firstItem="NHD-KT-jes" firstAttribute="top" secondItem="9oY-c0-Woa" secondAttribute="bottom" constant="15" id="aha-1k-PgH"/>
-                                                <constraint firstItem="KB6-SE-AZc" firstAttribute="leading" secondItem="vkx-jP-f8U" secondAttribute="trailing" constant="15" id="bc0-dF-XD1"/>
-                                                <constraint firstAttribute="trailing" secondItem="KB6-SE-AZc" secondAttribute="trailing" constant="15" id="cXX-Un-3DK"/>
                                                 <constraint firstItem="9oY-c0-Woa" firstAttribute="top" secondItem="4ru-Xc-4xO" secondAttribute="top" constant="10" id="fsp-CC-6ad"/>
-                                                <constraint firstItem="NHD-KT-jes" firstAttribute="leading" secondItem="598-dg-7l5" secondAttribute="trailing" constant="15" id="gJ1-nv-8tu"/>
+                                                <constraint firstItem="MeB-pz-Skr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9oY-c0-Woa" secondAttribute="bottom" constant="8" id="on2-81-zmA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.20392156862745098" green="0.25098039215686274" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="buttonA" destination="598-dg-7l5" id="dJo-nM-eYL"/>
-                                            <outlet property="buttonB" destination="NHD-KT-jes" id="JSZ-gy-kGV"/>
-                                            <outlet property="buttonC" destination="vkx-jP-f8U" id="djF-tZ-EuW"/>
-                                            <outlet property="buttonD" destination="KB6-SE-AZc" id="df8-HB-t1d"/>
+                                            <outlet property="answerView" destination="MeB-pz-Skr" id="ao3-4d-0HO"/>
                                             <outlet property="questionLabel" destination="9oY-c0-Woa" id="0iS-aZ-KLO"/>
                                         </connections>
                                     </tableViewCell>
@@ -126,8 +102,8 @@
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

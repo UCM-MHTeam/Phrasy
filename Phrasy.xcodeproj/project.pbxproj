@@ -16,6 +16,7 @@
 		99182017261AE0140084CA33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99182016261AE0140084CA33 /* Assets.xcassets */; };
 		9918201A261AE0140084CA33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99182018261AE0140084CA33 /* LaunchScreen.storyboard */; };
 		99B010E3261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */; };
+		99B010EE261E5545006A53CF /* AnswerChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B010ED261E5545006A53CF /* AnswerChoiceCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		99182019261AE0140084CA33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9918201B261AE0140084CA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Catamaran-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		99B010ED261E5545006A53CF /* AnswerChoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerChoiceCell.swift; sourceTree = "<group>"; };
 		A89C55CDDE93288CF707E59C /* Pods-Phrasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phrasy.release.xcconfig"; path = "Target Support Files/Pods-Phrasy/Pods-Phrasy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */,
+				99B010ED261E5545006A53CF /* AnswerChoiceCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */,
+				99B010EE261E5545006A53CF /* AnswerChoiceCell.swift in Sources */,
 				31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */,
 				99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */,
 			);
