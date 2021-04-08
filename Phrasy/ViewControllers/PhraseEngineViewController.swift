@@ -11,11 +11,12 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
         
 
     let model: [[UIColor]] = generateRandomData()
+    var storedOffsets = [Int: CGFloat]()
 
     
     @IBOutlet weak var tableView: UITableView!
     
-    let questionArr:[String] = ["What did they ask you?","What best describes what you’re feeling now?", "more text", "more text", "hello there"]
+    let questionArr:[String] = ["What did they ask you?","What best describes what you’re feeling now?", "What do you need right now?", "What role can the play for you?", "hello there"]
    
     let buttonStatements:[[String]] = [
         ["How are you feeling?","Another question", "More", "More Text"],
@@ -41,30 +42,33 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return questionArr.count
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? QuestionCell else { return }
 
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-        
-//        tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
-        
+        tableViewCell.collectionViewOffset = storedOffsets[indexPath.row] ?? 0
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 
-        guard cell is QuestionCell else { return }
+//        guard cell is QuestionCell else { return }
+        guard let tableViewCell = cell as? QuestionCell else { return }
 
-//        storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
+        storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
+
+    }
+    
+    func getCellIndex(_ tableView: UITableView, indexPath: IndexPath) -> Int {
+        return indexPath.row
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         print(indexPath.row)
-//        print(counter)
         
         cell.questionLabel.text = questionArr[indexPath.row]
         
@@ -108,18 +112,16 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
 extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return model[collectionView.tag].count
+//        let cell = tableView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath)
+        
+        /* this is what i'm trying to return, but idk how to access the tableView's index*/
+//        return buttonStatements[table].count
+        
     }
     
-//    collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-//        collectionView.register
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath)
-//                let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell",
-//                    forIndexPath: indexPath)
         
                 cell.backgroundColor = model[collectionView.tag][indexPath.item]
         

@@ -64,4 +64,6 @@ extension QuestionCell {
         set { answerView.contentOffset.x = newValue }
         get { return answerView.contentOffset.x }
     }
+    
+    
 }
