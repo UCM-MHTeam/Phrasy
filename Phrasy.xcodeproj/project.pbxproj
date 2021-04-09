@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05FE2144262113910076791D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE2143262113910076791D /* LoginViewController.swift */; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
 		9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918200D261AE00F0084CA33 /* AppDelegate.swift */; };
 		99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918200F261AE00F0084CA33 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05FE2143262113910076791D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		63768546924F9025BA8AB497 /* Pods_Phrasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phrasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7473B7F3E8BC4E387E339B50 /* Pods-Phrasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phrasy.debug.xcconfig"; path = "Target Support Files/Pods-Phrasy/Pods-Phrasy.debug.xcconfig"; sourceTree = "<group>"; };
 		9918200A261AE00F0084CA33 /* Phrasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phrasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,19 +44,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05FE21422621132D0076791D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				05FE2143262113910076791D /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4119A8937090DEA544A6B1FD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7473B7F3E8BC4E387E339B50 /* Pods-Phrasy.debug.xcconfig */,
 				A89C55CDDE93288CF707E59C /* Pods-Phrasy.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		99182001261AE00F0084CA33 = {
 			isa = PBXGroup;
 			children = (
+				05FE21422621132D0076791D /* ViewControllers */,
 				9918200C261AE00F0084CA33 /* Phrasy */,
 				9918200B261AE00F0084CA33 /* Products */,
 				4119A8937090DEA544A6B1FD /* Pods */,
@@ -206,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05FE2144262113910076791D /* LoginViewController.swift in Sources */,
 				99182012261AE00F0084CA33 /* ViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */,
