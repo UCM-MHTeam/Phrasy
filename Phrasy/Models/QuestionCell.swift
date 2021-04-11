@@ -58,14 +58,20 @@ extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionView
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell") as! QuestionCell
 
         let index = collectionView.tag
-
         return QuestionsList[index].answers?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath)
+        let questionIndex = collectionView.tag
+        let answerIndex = indexPath.row
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath) as! AnswerChoiceCell
+        
+        cell.answerButton.setTitle(QuestionsList[questionIndex].answers?[answerIndex], for: .normal)
+        
+       
         
         return cell
         }
