@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F1B-d1-oGh">
-                                <rect key="frame" x="0.0" y="194" width="375" height="473"/>
+                                <rect key="frame" x="0.0" y="320" width="375" height="347"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="127" id="rDv-QE-XTn" customClass="QuestionCell" customModule="Phrasy" customModuleProvider="target">
@@ -67,7 +67,7 @@
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="isPressed:" destination="rDv-QE-XTn" eventType="touchUpInside" id="9no-HP-t5F"/>
+                                                                            <action selector="onPressed:" destination="5zC-Ec-22c" eventType="touchUpInside" id="M06-HC-WTW"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -87,9 +87,11 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                     <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vxg-2u-NjU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </collectionReusableView>
                                                     <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SsP-t2-77S">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </collectionReusableView>
                                                 </collectionView>
@@ -112,18 +114,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-ZI-Co0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-ZI-Co0">
                                 <rect key="frame" x="46" y="275" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.70980392160000005" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="formPhrase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWm-jE-Btt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8El-GK-vNb">
-                                <rect key="frame" x="46" y="99" width="296" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8El-GK-vNb">
+                                <rect key="frame" x="46" y="126" width="296" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,10 +132,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
+                            <constraint firstItem="8El-GK-vNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="126" id="0xg-hD-0Dp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8El-GK-vNb" secondAttribute="trailing" constant="33" id="FaL-rp-23q"/>
                             <constraint firstItem="F1B-d1-oGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WOR-xT-YgP"/>
+                            <constraint firstItem="8El-GK-vNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="Ze4-1R-6oL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbT-ZI-Co0" secondAttribute="trailing" constant="283" id="cPl-Sd-Na0"/>
+                            <constraint firstItem="F1B-d1-oGh" firstAttribute="top" secondItem="fbT-ZI-Co0" secondAttribute="bottom" constant="15" id="iaG-6n-2mj"/>
+                            <constraint firstItem="fbT-ZI-Co0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="jof-jQ-Mpw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F1B-d1-oGh" secondAttribute="bottom" id="ndo-a0-zmI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F1B-d1-oGh" secondAttribute="trailing" id="xoD-XN-DK1"/>
-                            <constraint firstItem="F1B-d1-oGh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="194" id="znq-9G-uGI"/>
+                            <constraint firstItem="F1B-d1-oGh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="320" id="znq-9G-uGI"/>
                         </constraints>
                     </view>
                     <connections>

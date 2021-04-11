@@ -15,9 +15,9 @@ class QuestionCell: UITableViewCell {
     @IBOutlet private weak var answerView: UICollectionView!
 
     
-    @IBAction func isPressed(_ sender: Any) {
-        print("Hello :)")
-    }
+//    @IBAction func isPressed(_ sender: Any) {
+//        print(Quest)
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
