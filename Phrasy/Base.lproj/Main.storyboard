@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -34,12 +34,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What question did they ask you?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oY-c0-Woa" userLabel="QuestionLabel">
-                                                    <rect key="frame" x="16" y="10" width="349" height="23.5"/>
+                                                    <rect key="frame" x="16" y="10" width="349" height="33"/>
                                                     <fontDescription key="fontDescription" name="CatamaranRoman-Bold" family="Catamaran" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeB-pz-Skr">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeB-pz-Skr">
                                                     <rect key="frame" x="0.0" y="82" width="375" height="45"/>
                                                     <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -47,23 +47,50 @@
                                                         <constraint firstAttribute="width" constant="375" id="Qhb-ho-seS"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RuC-aS-TfV">
-                                                        <size key="itemSize" width="100" height="35"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="itemSize" width="100" height="51.5"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="8"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="10"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnswerChoiceCell" id="5zC-Ec-22c" customClass="AnswerChoiceCell" customModule="Phrasy" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="-12.5" width="100" height="70"/>
+                                                            <rect key="frame" x="0.0" y="-3.5" width="100" height="51.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BBe-iF-j70">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="51.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol7-it-2m6">
+                                                                        <rect key="frame" x="27" y="11" width="46" height="30"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="isPressed:" destination="rDv-QE-XTn" eventType="touchUpInside" id="9no-HP-t5F"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="Ol7-it-2m6" secondAttribute="trailing" constant="27" id="1SC-nt-o9k"/>
+                                                                    <constraint firstItem="Ol7-it-2m6" firstAttribute="leading" secondItem="BBe-iF-j70" secondAttribute="leading" constant="27" id="1tR-IU-LLF"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Ol7-it-2m6" secondAttribute="bottom" constant="10.5" id="AVa-pl-VrU"/>
+                                                                    <constraint firstItem="Ol7-it-2m6" firstAttribute="top" secondItem="BBe-iF-j70" secondAttribute="top" constant="11" id="AoM-Zr-xCq"/>
+                                                                </constraints>
                                                             </collectionViewCellContentView>
-                                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                                            <size key="customSize" width="100" height="70"/>
+                                                            <color key="backgroundColor" red="0.93725490196078431" green="0.70980392156862748" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <size key="customSize" width="100" height="51.5"/>
+                                                            <connections>
+                                                                <outlet property="answerButton" destination="Ol7-it-2m6" id="Yae-gb-HSp"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vxg-2u-NjU">
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </collectionReusableView>
+                                                    <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SsP-t2-77S">
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </collectionReusableView>
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
@@ -106,9 +133,6 @@
     <resources>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

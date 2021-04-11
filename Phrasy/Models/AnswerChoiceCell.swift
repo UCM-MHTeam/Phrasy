@@ -9,4 +9,6 @@ import UIKit
 
 class AnswerChoiceCell: UICollectionViewCell {
     
+    @IBOutlet weak var answerButton: UIButton!
+    
 }

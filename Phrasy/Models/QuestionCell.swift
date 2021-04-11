@@ -7,25 +7,17 @@
 
 import UIKit
 
+//let model: [[UIColor]] = generateRandomData()
+
 class QuestionCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
-    
     @IBOutlet private weak var answerView: UICollectionView!
+
     
-//    @IBOutlet weak var buttonA: UIButton!
-//    @IBOutlet weak var buttonB: UIButton!
-//    @IBOutlet weak var buttonC: UIButton!
-//    @IBOutlet weak var buttonD: UIButton!
-//
-//    @IBAction func buttonA(_ sender: Any) {
-//    }
-//    @IBAction func buttonB(_ sender: Any) {
-//    }
-//    @IBAction func buttonC(_ sender: Any) {
-//    }
-//    @IBAction func buttonD(_ sender: Any) {
-//    }
+    @IBAction func isPressed(_ sender: Any) {
+        print("Hello :)")
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,15 +29,6 @@ class QuestionCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-//    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D, forRow row: Int) {
-//
-//        answerView.delegate = dataSourceDelegate
-//        answerView.dataSource = dataSourceDelegate
-//        answerView.tag = row
-//        answerView.setContentOffset(answerView.contentOffset, animated:false) // Stops collection view if it was scrolling.
-//        answerView.reloadData()
-//    }
     
 }
 
@@ -67,3 +50,44 @@ extension QuestionCell {
     
     
 }
+
+extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell") as! QuestionCell
+
+        let index = collectionView.tag
+
+        return QuestionsList[index].answers?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath)
+        
+        return cell
+        }
+}
+
+//func generateRandomData() -> [[UIColor]] {
+//    let numberOfRows = 20
+//    let numberOfItemsPerRow = PhraseEngineViewController.
+//
+//    return (0..<numberOfRows).map { _ in
+//        return (0..<numberOfItemsPerRow).map { _ in UIColor.randomColor() }
+//    }
+//}
+//
+//extension UIColor {
+//
+//    class func randomColor() -> UIColor {
+//
+//        let hue = CGFloat(arc4random() % 100) / 100
+//        let saturation = CGFloat(arc4random() % 100) / 100
+//        let brightness = CGFloat(arc4random() % 100) / 100
+//
+//        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
+//    }
+//}
