@@ -18,6 +18,7 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
     var storedOffsets = [Int: CGFloat]()
 
     
+    @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     let QuestionsList: [Question] = [
@@ -30,17 +31,6 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
         Question(questionString: "What role can they play for you?", answers: ["give me some space", "listen to me", "accompany me for a while", "provide some input", "refer me to someone that can help"])
     ]
     
-//    let questionArr:[String] = ["What did they ask you?","What best describes what you’re feeling now?", "What do you need right now?", "What role can the play for you?", "hello there"]
-//
-//    let buttonStatements:[[String]] = [
-//        ["How are you feeling?","Another question", "More", "More Text"],
-//        ["Anxious","Angry", "Worried", "Confused"],
-//        ["some alone time", "some company", "to make a decision", "To take action on something"],
-//        ["Give me space", "Listen to me", "Accompany me for a while", "Provide some input"]
-//
-//    ]
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -48,6 +38,22 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func formPhrase(_ sender: Any) {
+        self.formPhraseLabel()
+    }
+    
+    
+    @objc func formPhraseLabel() {
+        let choice = ["sad", "some company", "be able to call me later today?"]
+//        let choice: [String]
+        
+        
+        
+        self.phraseLabel.text = "Hey, I'm feeling \(choice[0]) right now and I need \(choice[1]). Will you \(choice[2])?"
+    }
+    
+    
     
     func register(_ cellClass: AnyClass?, forCellWithReuseIdentifier identifier: String) {
         
