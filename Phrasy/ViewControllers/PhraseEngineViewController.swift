@@ -1,0 +1,108 @@
+//
+//  PhraseEngineViewController.swift
+//  Phrasy
+//
+//  Created by Jonathan Ballona Sanchez on 4/5/21.
+//
+
+import UIKit
+
+struct Question {
+    var questionString: String?
+    var answers: [String]?
+}
+
+var choice: [String] = ["0","1","2","3"]
+
+class PhraseEngineViewController: UIViewController {
+    
+    @IBOutlet weak var phraseLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    let QuestionsList: [Question] = [
+        Question(questionString: "What did they ask you?",
+                 answers: ["How are you feeling?", "How ya doing?"]),
+        Question(questionString: "What best descrives what you're feeling now?",
+                 answers: ["anxious","unhappy","exhausted","angry","worried","afraid","pessimistic","uncomfortable","disappointed","confused","frustrated"]),
+        Question(questionString: "What do you need right now?",
+                 answers: ["some alone time", "someone to vent to", "some company", "to make a decision", "to take action on something"]),
+        Question(questionString: "What role can they play for you?", answers: ["give me some space", "listen to me", "accompany me for a while", "provide some input", "refer me to someone that can help"])
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func formPhrase(_ sender: Any) {
+        self.formPhraseLabel()
+    }
+    
+    
+    @objc func formPhraseLabel() {
+        self.phraseLabel.text = "Hey, I'm feeling \(choice[1]) right now and I need \(choice[2]). Will you \(choice[3])?"
+    }
+}
+
+
+
+extension PhraseEngineViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return QuestionsList.count
+    }
+    
+    // required for answerView in questionView cell (collection view in table view cell
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let tableViewCell = cell as? QuestionCell else { return }
+
+        tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
+    }
+    
+    // required for answerView in questionView cell (collection view in table view cell
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        guard cell is QuestionCell else { return }
+//        guard let tableViewCell = cell as? QuestionCell else { return }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+        
+        cell.tag = indexPath.item
+        cell.questionLabel.text = QuestionsList[indexPath.row].questionString
+                
+        return cell
+
+    }
+}
+
+
+extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let index = collectionView.tag
+        return QuestionsList[index].answers?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let questionIndex = collectionView.tag
+        let answerIndex = indexPath.row
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath) as! AnswerChoiceCell
+        
+        cell.answerButton.setTitle(QuestionsList[questionIndex].answers?[answerIndex], for: .normal)
+        
+        cell.callback = {
+            print("button pressed", indexPath)
+            print(collectionView.tag)
+            
+            choice[questionIndex] = self.QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
+        }
+    
+        return cell
+    }
+}
