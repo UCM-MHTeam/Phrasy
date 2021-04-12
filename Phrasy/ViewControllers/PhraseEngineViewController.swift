@@ -7,124 +7,102 @@
 
 import UIKit
 
-class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
-    var questionCells:[QuestionCell] = [];
+struct Question {
+    var questionString: String?
+    var answers: [String]?
+}
 
-    @IBOutlet weak var phraseLabel: UILabel!
+var choice: [String] = ["0","1","2","3"]
+
+class PhraseEngineViewController: UIViewController {
     
+    @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let questionArr:[String] = ["What did they ask you?","What best describes what you’re feeling now?", "more text", "more text", "hello there"]
-   
-    @IBAction func formPhrase(_ sender: Any) {
-        self.formPhraseLabel()
-    }
-    
-    let buttonStatements:[[String]] = [
-        ["A", "B", "C", "D"],
-        ["E", "F", "G", "H"],
-        ["I", "J", "K", "L"],
-        ["M", "N", "O", "P"]
+    let QuestionsList: [Question] = [
+        Question(questionString: "What did they ask you?",
+                 answers: ["How are you feeling?", "How ya doing?"]),
+        Question(questionString: "What best descrives what you're feeling now?",
+                 answers: ["anxious","unhappy","exhausted","angry","worried","afraid","pessimistic","uncomfortable","disappointed","confused","frustrated"]),
+        Question(questionString: "What do you need right now?",
+                 answers: ["some alone time", "someone to vent to", "some company", "to make a decision", "to take action on something"]),
+        Question(questionString: "What role can they play for you?", answers: ["give me some space", "listen to me", "accompany me for a while", "provide some input", "refer me to someone that can help"])
     ]
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-    
+
+        // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @IBAction func formPhrase(_ sender: Any) {
         self.formPhraseLabel()
-        self.reloadInputViews()
     }
     
     
+    @objc func formPhraseLabel() {
+        self.phraseLabel.text = "Hey, I'm feeling \(choice[1]) right now and I need \(choice[2]). Will you \(choice[3])?"
+    }
+}
+
+
+
+extension PhraseEngineViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return QuestionsList.count
     }
     
+    // required for answerView in questionView cell (collection view in table view cell
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let tableViewCell = cell as? QuestionCell else { return }
+
+        tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
+    }
+    
+    // required for answerView in questionView cell (collection view in table view cell
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        guard cell is QuestionCell else { return }
+//        guard let tableViewCell = cell as? QuestionCell else { return }
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
         
-        cell.questionLabel.text = questionArr[indexPath.row] as? String
-        
-        for n in 0...3 {
-            if(n == 0){
-                cell.buttonA.setTitle(buttonStatements[indexPath.row][n], for: .normal)
-            }else if(n == 1){
-                cell.buttonB.setTitle(buttonStatements[indexPath.row][n], for: .normal)
-            }else if(n == 2){
-                cell.buttonC.setTitle(buttonStatements[indexPath.row][n], for: .normal)
-            }else{
-                cell.buttonD.setTitle(buttonStatements[indexPath.row][n], for: .normal)
-            }
-        }
-        
-        questionCells.append(cell)
-        
+        cell.tag = indexPath.item
+        cell.questionLabel.text = QuestionsList[indexPath.row].questionString
+                
         return cell
 
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let index = collectionView.tag
+        return QuestionsList[index].answers?.count ?? 0
     }
-    */
-    @objc func formPhraseLabel(){
-        //Hey <person>, I’m feeling (2) right now, and I need (3). Will you (4)?
-        var phraseBones:[String] = ["Hey ", "___",", I'm feeling ", "___"," right now, and I need ", "___", ". Will you ", "___", "?"]
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let questionIndex = collectionView.tag
+        let answerIndex = indexPath.row
         
-        var sentence = ""
-        var chosenButtons:[String] = ["default", "default", "default", "default"]
-        for n in 0...3{
-            if(questionCells[n].returnSelectedCellButton() != -1){
-                if(questionCells[n].returnSelectedCellButton() == 0){
-                    chosenButtons[n] = (questionCells[n].buttonA.titleLabel?.text)!
-                }
-                if(questionCells[n].returnSelectedCellButton() == 1){
-                    chosenButtons[n] = (questionCells[n].buttonB.titleLabel?.text)!
-                }
-                if(questionCells[n].returnSelectedCellButton() == 2){
-                    chosenButtons[n] = (questionCells[n].buttonC.titleLabel?.text)!
-                }
-                if(questionCells[n].returnSelectedCellButton() == 3){
-                    chosenButtons[n] = (questionCells[n].buttonD.titleLabel?.text)!
-                }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath) as! AnswerChoiceCell
+        
+        cell.answerButton.setTitle(QuestionsList[questionIndex].answers?[answerIndex], for: .normal)
+        
+        cell.callback = {
+            print("button pressed", indexPath)
+            print(collectionView.tag)
             
+            choice[questionIndex] = self.QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
         }
-        
-            if(chosenButtons[0] != "default"){
-                phraseBones[1] = chosenButtons[0]
-            }
-            if(chosenButtons[1] != "default"){
-                phraseBones[3] = chosenButtons[1]
-            }
-            if(chosenButtons[2] != "default"){
-                phraseBones[5] = chosenButtons[2]
-            }
-            if(chosenButtons[3] != "default"){
-                phraseBones[7] = chosenButtons[3]
-            }
-        }
-        
-        
-        for m in 0...(phraseBones.count-1){
-            sentence += phraseBones[m]
-        }
-        print(sentence)
-        
-        phraseLabel.text = sentence as? String
-        
-        
+    
+        return cell
     }
-
 }
