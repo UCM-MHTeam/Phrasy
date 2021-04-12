@@ -12,11 +12,9 @@ struct Question {
     var answers: [String]?
 }
 
-class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-        
+var choice: [String] = ["0","1","2","3"]
 
-    var storedOffsets = [Int: CGFloat]()
-
+class PhraseEngineViewController: UIViewController {
     
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -25,9 +23,9 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
         Question(questionString: "What did they ask you?",
                  answers: ["How are you feeling?", "How ya doing?"]),
         Question(questionString: "What best descrives what you're feeling now?",
-                 answers: ["Anxious","Unhappy","Exhausted","Angry","Worried","Afraid","Pessimistic","Uncomfortable","Disappointed","Confused","Frustrated"]),
+                 answers: ["anxious","unhappy","exhausted","angry","worried","afraid","pessimistic","uncomfortable","disappointed","confused","frustrated"]),
         Question(questionString: "What do you need right now?",
-                 answers: ["some alone time", " someone to vent to", "some company", "to make a decision", "to take action on something"]),
+                 answers: ["some alone time", "someone to vent to", "some company", "to make a decision", "to take action on something"]),
         Question(questionString: "What role can they play for you?", answers: ["give me some space", "listen to me", "accompany me for a while", "provide some input", "refer me to someone that can help"])
     ]
     
@@ -45,54 +43,66 @@ class PhraseEngineViewController: UIViewController, UITableViewDelegate, UITable
     
     
     @objc func formPhraseLabel() {
-        let choice = ["sad", "some company", "be able to call me later today?"]
-//        let choice: [String]
-        
-        
-        
-        self.phraseLabel.text = "Hey, I'm feeling \(choice[0]) right now and I need \(choice[1]). Will you \(choice[2])?"
+        self.phraseLabel.text = "Hey, I'm feeling \(choice[1]) right now and I need \(choice[2]). Will you \(choice[3])?"
     }
-    
-    
-    
-    func register(_ cellClass: AnyClass?, forCellWithReuseIdentifier identifier: String) {
-        
-    }
+}
+
+
+
+extension PhraseEngineViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return QuestionsList.count
     }
     
+    // required for answerView in questionView cell (collection view in table view cell
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? QuestionCell else { return }
 
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-        tableViewCell.collectionViewOffset = storedOffsets[indexPath.row] ?? 0
     }
     
+    // required for answerView in questionView cell (collection view in table view cell
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 
-//        guard cell is QuestionCell else { return }
-        guard let tableViewCell = cell as? QuestionCell else { return }
-
-        storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
-
+        guard cell is QuestionCell else { return }
+//        guard let tableViewCell = cell as? QuestionCell else { return }
     }
 
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-        print(indexPath.row)
         
-//        cell.questionLabel.text = questionArr[indexPath.row]
         cell.tag = indexPath.item
         cell.questionLabel.text = QuestionsList[indexPath.row].questionString
-    
-        
-        
-        
                 
         return cell
 
+    }
+}
+
+
+extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let index = collectionView.tag
+        return QuestionsList[index].answers?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let questionIndex = collectionView.tag
+        let answerIndex = indexPath.row
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath) as! AnswerChoiceCell
+        
+        cell.answerButton.setTitle(QuestionsList[questionIndex].answers?[answerIndex], for: .normal)
+        
+        cell.callback = {
+            print("button pressed", indexPath)
+            print(collectionView.tag)
+            
+            choice[questionIndex] = self.QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
+        }
+    
+        return cell
     }
 }
