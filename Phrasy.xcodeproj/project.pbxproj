@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05FE2144262113910076791D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE2143262113910076791D /* LoginViewController.swift */; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
 		312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */; };
 		31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */; };
@@ -77,6 +78,7 @@
 		99182001261AE00F0084CA33 = {
 			isa = PBXGroup;
 			children = (
+				05FE21422621132D0076791D /* ViewControllers */,
 				9918200C261AE00F0084CA33 /* Phrasy */,
 				9918200B261AE00F0084CA33 /* Products */,
 				4119A8937090DEA544A6B1FD /* Pods */,
