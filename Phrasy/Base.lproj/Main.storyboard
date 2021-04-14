@@ -67,6 +67,7 @@
                     <connections>
                         <outlet property="passwordField" destination="0tU-Fy-tGy" id="xxH-mN-4kn"/>
                         <outlet property="usernameField" destination="g5i-nK-ukm" id="djE-Oq-7Ka"/>
+                        <segue destination="unY-gs-yaW" kind="presentation" identifier="loginSegue" id="scz-Wf-d9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -78,7 +79,7 @@
             <objects>
                 <viewController id="78l-h0-h1D" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LQM-hR-DkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ep-Ug-NJv">
@@ -96,26 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxz-Yl-oZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3167.1999999999998" y="79.610194902548727"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="e7N-xQ-5JF">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iJ8-gQ-09x" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="yY3-hp-3oJ"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RHA-TF-llR">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="unY-gs-yaW" kind="relationship" relationship="viewControllers" id="OV1-cy-2lf"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4R3-eq-EV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1288.8" y="79.610194902548727"/>
+            <point key="canvasLocation" x="1830" y="80"/>
         </scene>
         <!--Item-->
         <scene sceneID="hSe-hq-q5F">
@@ -124,7 +106,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="RYp-0K-fZP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g1Z-eW-Jk4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -134,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKB-nS-ZT9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="79.610194902548727"/>
+            <point key="canvasLocation" x="890" y="80"/>
         </scene>
     </scenes>
     <resources>
