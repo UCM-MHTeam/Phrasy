@@ -33,8 +33,6 @@ class PhraseEngineViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func formPhrase(_ sender: Any) {
