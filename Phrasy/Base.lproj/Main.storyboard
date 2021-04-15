@@ -125,7 +125,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ibk-sy-Rj2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vo5-Eb-ttO" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AllTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="Vo5-Eb-ttO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rir-cj-yGA">
                         <autoresizingMask key="autoresizingMask"/>
@@ -143,7 +143,7 @@
         <!--Item-->
         <scene sceneID="A9c-El-itn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pb6-6j-Jdk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Pb6-6j-Jdk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ZRa-PY-vwy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fdg-Ku-jA6">
