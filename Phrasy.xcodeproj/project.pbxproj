@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05FE2144262113910076791D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE2143262113910076791D /* LoginViewController.swift */; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
+		31125E9426281591002B019E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31125E9326281591002B019E /* FeedViewController.swift */; };
 		9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918200D261AE00F0084CA33 /* AppDelegate.swift */; };
 		99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918200F261AE00F0084CA33 /* SceneDelegate.swift */; };
 		99182012261AE00F0084CA33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99182011261AE00F0084CA33 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		05FE2143262113910076791D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		31125E9326281591002B019E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		63768546924F9025BA8AB497 /* Pods_Phrasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phrasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7473B7F3E8BC4E387E339B50 /* Pods-Phrasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phrasy.debug.xcconfig"; path = "Target Support Files/Pods-Phrasy/Pods-Phrasy.debug.xcconfig"; sourceTree = "<group>"; };
 		9918200A261AE00F0084CA33 /* Phrasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phrasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				05FE2143262113910076791D /* LoginViewController.swift */,
+				31125E9326281591002B019E /* FeedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				05FE2144262113910076791D /* LoginViewController.swift in Sources */,
 				99182012261AE00F0084CA33 /* ViewController.swift in Sources */,
+				31125E9426281591002B019E /* FeedViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */,
 			);
