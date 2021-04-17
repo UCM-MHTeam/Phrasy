@@ -241,41 +241,17 @@
                         <viewLayoutGuide key="safeArea" id="Tjx-AB-rPO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="KMg-Yf-ooZ"/>
                     <navigationItem key="navigationItem" id="Hrt-aW-H7k">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="Yig-eS-7Dq">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYa-86-aMx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1434" y="1327"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="OfE-9D-IsS">
-            <objects>
-                <viewController id="BL1-3F-1ze" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Enm-a7-Uep">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dummy for PhraseEngine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQ4-dW-y1H">
-                                <rect key="frame" x="91" y="265" width="193" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="xQH-zC-Jdh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="9OR-lG-F5D"/>
-                    <navigationItem key="navigationItem" id="0ca-I2-Tcy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Piq-G1-sc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-130" y="-376"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Llk-1y-dIV">
