@@ -28,20 +28,38 @@ class QuestionCell: UITableViewCell {
 }
 
 extension QuestionCell {
-
+    
     func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D, forRow row: Int) {
-
         answerView.delegate = dataSourceDelegate
         answerView.dataSource = dataSourceDelegate
         answerView.tag = row
         answerView.setContentOffset(answerView.contentOffset, animated:false) // Stops collection view if it was scrolling.
         answerView.reloadData()
     }
-
-//    var collectionViewOffset: CGFloat {
-//        set { answerView.contentOffset.x = newValue }
-//        get { return answerView.contentOffset.x }
-//    }
 }
 
+extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let index = collectionView.tag
+        return QuestionsList[index].answers?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let questionIndex = collectionView.tag
+        let answerIndex = indexPath.row
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath) as! AnswerChoiceCell
+        
+        cell.answerButton.setTitle(QuestionsList[questionIndex].answers?[answerIndex], for: .normal)
+        
+        cell.callback = {
+            print("button pressed", indexPath)
+            print(collectionView.tag)
+            
+            choice[questionIndex] = self.QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
+        }
+        return cell
+    }
+}
 

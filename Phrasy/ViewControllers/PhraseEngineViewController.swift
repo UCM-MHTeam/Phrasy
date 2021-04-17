@@ -39,7 +39,6 @@ class PhraseEngineViewController: UIViewController {
         self.formPhraseLabel()
     }
     
-    
     @objc func formPhraseLabel() {
         self.phraseLabel.text = "Hey, I'm feeling \(choice[1]) right now and I need \(choice[2]). Will you \(choice[3])?"
     }
@@ -61,9 +60,7 @@ extension PhraseEngineViewController: UITableViewDelegate, UITableViewDataSource
     
     // required for answerView in questionView cell (collection view in table view cell
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-
         guard cell is QuestionCell else { return }
-//        guard let tableViewCell = cell as? QuestionCell else { return }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,34 +70,6 @@ extension PhraseEngineViewController: UITableViewDelegate, UITableViewDataSource
         cell.tag = indexPath.item
         cell.questionLabel.text = QuestionsList[indexPath.row].questionString
                 
-        return cell
-
-    }
-}
-
-
-extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let index = collectionView.tag
-        return QuestionsList[index].answers?.count ?? 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let questionIndex = collectionView.tag
-        let answerIndex = indexPath.row
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerChoiceCell", for: indexPath) as! AnswerChoiceCell
-        
-        cell.answerButton.setTitle(QuestionsList[questionIndex].answers?[answerIndex], for: .normal)
-        
-        cell.callback = {
-            print("button pressed", indexPath)
-            print(collectionView.tag)
-            
-            choice[questionIndex] = self.QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
-        }
-    
         return cell
     }
 }
