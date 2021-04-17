@@ -19,7 +19,7 @@ class DisclaimerViewController: UIViewController {
     }
     
     @IBAction func Decline(_ sender: Any){
-        
+        UIApplication.shared.open(URL(string: "https://linktr.ee/Crayzy19")! as URL, options: [:], completionHandler: nil)
     }
     
 
