@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class SettingsViewController: UIViewController {
 
@@ -15,7 +16,20 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLogoutButton(_ sender: Any) {
+        PFUser.logOutInBackground(block: { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }else {
+                print("Success logout")
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+                let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                sceneDelegate.window?.rootViewController = loginViewController
+            }
+        })
+    }
+    
     /*
     // MARK: - Navigation
 
