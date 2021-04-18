@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E75D3D262A8DE600761EF7 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E75D3C262A8DE600761EF7 /* DisclaimerViewController.swift */; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
 		312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */; };
 		31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E75D3C262A8DE600761EF7 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
 		312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseEngineViewController.swift; sourceTree = "<group>"; };
 		63768546924F9025BA8AB497 /* Pods_Phrasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phrasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05E75D3A262A8DB700761EF7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				05E75D3C262A8DE600761EF7 /* DisclaimerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		31E9D66B261AED3C00BA6D6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		9918200C261AE00F0084CA33 /* Phrasy */ = {
 			isa = PBXGroup;
 			children = (
+				05E75D3A262A8DB700761EF7 /* ViewControllers */,
 				99B010E0261D4C35006A53CF /* Fonts */,
 				31E9D670261AEDB200BA6D6A /* Models */,
 				31E9D66B261AED3C00BA6D6A /* ViewControllers */,
@@ -248,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99182012261AE00F0084CA33 /* ViewController.swift in Sources */,
+				05E75D3D262A8DE600761EF7 /* DisclaimerViewController.swift in Sources */,
 				994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */,
