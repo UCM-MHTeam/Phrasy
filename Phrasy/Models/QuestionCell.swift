@@ -74,10 +74,10 @@ extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionView
         cell.layer.cornerRadius = 20.0
         cell.layer.shadowColor = UIColor.black.cgColor
         cell.layer.shadowOffset = CGSize(width:0,height: 4.0)
-        cell.layer.shadowRadius = 1.0
+        cell.layer.shadowRadius = 2
         cell.layer.shadowOpacity = 0.5
-        cell.layer.masksToBounds = false;
-        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.layer.cornerRadius).cgPath
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius: cell.layer.cornerRadius).cgPath
         
         
         
