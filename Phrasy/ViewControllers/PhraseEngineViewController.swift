@@ -18,6 +18,7 @@ class PhraseEngineViewController: UIViewController {
     
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var formPhraseButton: UIButton!
     
     let QuestionsList: [Question] = [
         Question(questionString: "What did they ask you?",
@@ -33,6 +34,9 @@ class PhraseEngineViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let buttonView = self.formPhraseButton.layer
+        buttonView.cornerRadius = 0.5 * buttonView.bounds.width
     }
     
     @IBAction func formPhrase(_ sender: Any) {
@@ -42,6 +46,8 @@ class PhraseEngineViewController: UIViewController {
     @objc func formPhraseLabel() {
         self.phraseLabel.text = "Hey, I'm feeling \(choice[1]) right now and I need \(choice[2]). Will you \(choice[3])?"
     }
+    
+    
 }
 
 

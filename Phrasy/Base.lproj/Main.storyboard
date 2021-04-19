@@ -165,43 +165,60 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="draft-bubble" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-K6-CaC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="draft-bubble" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-K6-CaC">
                                 <rect key="frame" x="22" y="104" width="289" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cAd-K6-CaC" secondAttribute="height" multiplier="289:148" id="3W0-G2-9jH"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-ZI-Co0">
-                                <rect key="frame" x="46" y="275" width="99" height="30"/>
-                                <color key="backgroundColor" red="0.93806673360593396" green="0.74215863404939431" blue="0.22896345612893079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Form Phrase">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word out your thoughts here!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8El-GK-vNb">
+                                <rect key="frame" x="41" y="125" width="250" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8El-GK-vNb" secondAttribute="height" multiplier="250:101" id="i2x-gs-GyX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbT-ZI-Co0">
+                                <rect key="frame" x="303" y="256" width="56" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fbT-ZI-Co0" secondAttribute="height" multiplier="1:1" id="cLA-86-JZu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="square.and.pencil" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="formPhrase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWm-jE-Btt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word out your thoughts here!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8El-GK-vNb">
-                                <rect key="frame" x="41" y="125" width="250" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="F1B-d1-oGh" firstAttribute="top" secondItem="fbT-ZI-Co0" secondAttribute="bottom" constant="8" symbolic="YES" id="0yt-fv-Iok"/>
+                            <constraint firstItem="8El-GK-vNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="BtV-Pk-hWJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cAd-K6-CaC" secondAttribute="trailing" constant="64" id="EfA-iW-SKy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbT-ZI-Co0" secondAttribute="trailing" constant="16" id="Fde-D4-JRY"/>
+                            <constraint firstItem="cAd-K6-CaC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Qef-kA-eph"/>
                             <constraint firstItem="F1B-d1-oGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WOR-xT-YgP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbT-ZI-Co0" secondAttribute="trailing" constant="230" id="XON-GS-ils"/>
-                            <constraint firstItem="F1B-d1-oGh" firstAttribute="top" secondItem="fbT-ZI-Co0" secondAttribute="bottom" constant="15" id="iaG-6n-2mj"/>
-                            <constraint firstItem="fbT-ZI-Co0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="jof-jQ-Mpw"/>
+                            <constraint firstItem="F1B-d1-oGh" firstAttribute="top" secondItem="8El-GK-vNb" secondAttribute="bottom" constant="94" id="f8K-v1-NHJ"/>
+                            <constraint firstItem="8El-GK-vNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="hW9-HU-EcE"/>
+                            <constraint firstItem="fbT-ZI-Co0" firstAttribute="top" secondItem="cAd-K6-CaC" secondAttribute="bottom" constant="4" id="jUI-fY-qy2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F1B-d1-oGh" secondAttribute="bottom" id="ndo-a0-zmI"/>
+                            <constraint firstItem="cAd-K6-CaC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="pOb-LP-0iF"/>
+                            <constraint firstItem="fbT-ZI-Co0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="303" id="vGT-pd-jQd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F1B-d1-oGh" secondAttribute="trailing" id="xoD-XN-DK1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8El-GK-vNb" secondAttribute="trailing" constant="84" id="zfG-lE-sdV"/>
                             <constraint firstItem="F1B-d1-oGh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="320" id="znq-9G-uGI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Draft" image="bubble.middle.bottom" catalog="system" id="Axb-nC-QQ0"/>
                     <navigationItem key="navigationItem" title="Message Draft" id="SBa-W6-lu7"/>
                     <connections>
+                        <outlet property="formPhraseButton" destination="fbT-ZI-Co0" id="kK4-EM-HXW"/>
                         <outlet property="phraseLabel" destination="8El-GK-vNb" id="b4q-Sa-FVV"/>
                         <outlet property="tableView" destination="F1B-d1-oGh" id="gCt-bt-ha2"/>
                     </connections>
@@ -336,8 +353,12 @@
         <image name="draft-bubble" width="339" height="172"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
