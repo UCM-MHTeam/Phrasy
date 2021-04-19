@@ -18,6 +18,7 @@
 		99182015261AE00F0084CA33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99182013261AE00F0084CA33 /* Main.storyboard */; };
 		994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A47152627B86B008A6D56 /* LoginViewController.swift */; };
 		996E8878262C21E70030E710 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E8877262C21E70030E710 /* PersonCell.swift */; };
+		996E8886262D263D0030E710 /* rgbToHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E8885262D263D0030E710 /* rgbToHex.swift */; };
 		99809D242627D40A0075A531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99809D232627D40A0075A531 /* LaunchScreen.storyboard */; };
 		99809D282627E0920075A531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99809D272627E0920075A531 /* Assets.xcassets */; };
 		99B010E3261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */; };
@@ -39,6 +40,7 @@
 		9918201B261AE0140084CA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		994A47152627B86B008A6D56 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		996E8877262C21E70030E710 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		996E8885262D263D0030E710 /* rgbToHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgbToHex.swift; sourceTree = "<group>"; };
 		99809D232627D40A0075A531 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99809D272627E0920075A531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Catamaran-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				9918201B261AE0140084CA33 /* Info.plist */,
 				99809D232627D40A0075A531 /* LaunchScreen.storyboard */,
 				99809D272627E0920075A531 /* Assets.xcassets */,
+				996E8885262D263D0030E710 /* rgbToHex.swift */,
 			);
 			path = Phrasy;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */,
 				996E8878262C21E70030E710 /* PersonCell.swift in Sources */,
 				990E92792627C4D20088C467 /* HomeViewController.swift in Sources */,
+				996E8886262D263D0030E710 /* rgbToHex.swift in Sources */,
 				99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */,
 				990E92802627C6BD0088C467 /* SettingsViewController.swift in Sources */,
 			);

@@ -15,6 +15,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         friendsView.dataSource = self
         friendsView.delegate = self
+        
+        gradient.frame = view.bounds
+        view.layer.insertSublayer(gradient, at: 0)
+
         // Do any additional setup after loading the view.
     }
     
@@ -24,14 +28,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCell", for: indexPath) as! PersonCell
-        
+
         cell.personNameLabel.text = "Drake B."
         cell.personImage.image = UIImage(named: "logo")
         
         // Person Cell Design
         cell.contentView.layer.cornerRadius = 24
         cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOpacity = 0.25
+        cell.layer.shadowOpacity = 0.5
         cell.layer.shadowOffset = CGSize(width:0,height: 2.0)
         cell.layer.shadowRadius = 10
         cell.layer.masksToBounds = false
@@ -39,6 +43,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("pressed cell #\(indexPath.item)")
+    }
+
     /*
     // MARK: - Navigation
 
@@ -48,6 +57,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Pass the selected object to the new view controller.
     }
     */
+    
+    lazy var gradient: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.type = .axial
+        gradient.colors = [
+            UIColor(hex: "#3673C7FF")!.cgColor,
+            UIColor(hex: "#63D47CFF")!.cgColor
+        ]
+        gradient.startPoint = CGPoint(x: -0.5, y: -0.5)
+        gradient.endPoint = CGPoint(x: 1.5, y: 1.5)
+        return gradient
+    }()
 
 }
 
