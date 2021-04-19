@@ -239,9 +239,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6sE-Of-U0n">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6sE-Of-U0n">
+                                <rect key="frame" x="0.0" y="96" width="390" height="748"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="10" id="sLE-zZ-4Cv">
                                     <size key="itemSize" width="142" height="198"/>
@@ -279,10 +278,27 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="NrS-0O-X6o">
+                                <rect key="frame" x="8" y="40" width="151" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NrS-0O-X6o" secondAttribute="height" multiplier="151:56" id="5Oe-9y-okO"/>
+                                    <constraint firstAttribute="height" constant="56" id="kaE-aX-Plt"/>
+                                    <constraint firstAttribute="width" constant="151" id="pIJ-dg-t1X"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tjx-AB-rPO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="6sE-Of-U0n" firstAttribute="leading" secondItem="Tjx-AB-rPO" secondAttribute="leading" id="Ch3-2d-QZM"/>
+                            <constraint firstItem="NrS-0O-X6o" firstAttribute="leading" secondItem="Tjx-AB-rPO" secondAttribute="leading" constant="8" id="cEC-w9-jbM"/>
+                            <constraint firstItem="6sE-Of-U0n" firstAttribute="trailing" secondItem="Tjx-AB-rPO" secondAttribute="trailing" id="cFp-uv-lrT"/>
+                            <constraint firstAttribute="bottom" secondItem="6sE-Of-U0n" secondAttribute="bottom" id="co7-2K-7Pg"/>
+                            <constraint firstItem="6sE-Of-U0n" firstAttribute="top" secondItem="Tjx-AB-rPO" secondAttribute="top" constant="52" id="g4q-yP-qDU"/>
+                            <constraint firstItem="NrS-0O-X6o" firstAttribute="top" secondItem="Tjx-AB-rPO" secondAttribute="top" constant="-4" id="uWh-FI-T85"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Koz-Zy-aPC"/>
                     <navigationItem key="navigationItem" id="Hrt-aW-H7k"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -306,7 +322,7 @@
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Dhh-1D-hmi" kind="relationship" relationship="viewControllers" id="hlL-uS-tba"/>
+                        <segue destination="78l-h0-h1D" kind="relationship" relationship="viewControllers" id="zcv-9t-RfF"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="St5-5v-mpA"/>
                         <segue destination="WRv-V7-MCl" kind="relationship" relationship="viewControllers" id="8iy-bL-kkQ"/>
                     </connections>
@@ -334,35 +350,19 @@
             </objects>
             <point key="canvasLocation" x="-2394.4000000000001" y="1327.2863568215894"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="vls-dZ-TTJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dhh-1D-hmi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="KMg-Yf-ooZ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a57-R7-cmv">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="78l-h0-h1D" kind="relationship" relationship="rootViewController" id="4ak-wo-eU1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vaT-Og-AJQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1434.4000000000001" y="1326.3868065967017"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="banner" width="179" height="82"/>
         <image name="bubble.middle.bottom" catalog="system" width="128" height="110"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

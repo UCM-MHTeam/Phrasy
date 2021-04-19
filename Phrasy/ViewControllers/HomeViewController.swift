@@ -18,7 +18,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         gradient.frame = view.bounds
         view.layer.insertSublayer(gradient, at: 0)
-
+        
+//        let logo = UIImage(named: "banner-1")
+//        let imageView = UIImageView(image: logo)
+//        imageView.contentMode = .scaleAspectFit
+//        self.navigationItem.titleView = imageView
+//        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "#060606FF")
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = .red
         // Do any additional setup after loading the view.
     }
     
