@@ -19,6 +19,7 @@ class PhraseEngineViewController: UIViewController {
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var formPhraseButton: UIButton!
+    @IBOutlet weak var personImage: UIImageView!
     
     let QuestionsList: [Question] = [
         Question(questionString: "What did they ask you?",
@@ -37,6 +38,7 @@ class PhraseEngineViewController: UIViewController {
         
         let buttonView = self.formPhraseButton.layer
         buttonView.cornerRadius = 0.5 * buttonView.bounds.width
+        self.personImage.image = UIImage(named: "profile-avatar")
     }
     
     @IBAction func formPhrase(_ sender: Any) {
