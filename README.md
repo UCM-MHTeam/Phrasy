@@ -238,7 +238,6 @@ query.findObjectsInBackground { (upCells, error) in
 ## Progress
 
 **Milestone #1**: Phrase Engine (to be continued to next milestone)
-
 ![](https://i.imgur.com/4qUmTsJ.gif)
 
 **Milestone #2**: Working Phrase Engine and Login View (to be continued to next milestone)
