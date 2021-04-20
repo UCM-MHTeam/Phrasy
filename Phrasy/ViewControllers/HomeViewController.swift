@@ -40,16 +40,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCell", for: indexPath) as! PersonCell
 
         cell.personNameLabel.text = "Drake B."
-        cell.personImage.image = UIImage(named: "logo")
+        cell.personImage.image = UIImage(named: "profile-avatar")
         
         // Person Cell Design
         cell.contentView.layer.cornerRadius = 24
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOpacity = 0.5
-        cell.layer.shadowOffset = CGSize(width:0,height: 2.0)
-        cell.layer.shadowRadius = 10
-        cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+//        cell.layer.shadowColor = UIColor.black.cgColor
+//        cell.layer.shadowOpacity = 0.5
+//        cell.layer.shadowOffset = CGSize(width:0,height: 2.0)
+//        cell.layer.shadowRadius = 10
+//        cell.layer.masksToBounds = false
+//        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         return cell
     }
