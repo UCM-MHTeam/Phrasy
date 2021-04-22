@@ -77,5 +77,8 @@ class InitialInfoViewController: UIViewController, UIImagePickerControllerDelega
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func nextPageButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "infoToProfilePic", sender: nil)
+    }
+    
 }

@@ -38,11 +38,20 @@ class LoginViewController: UIViewController {
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text
-//        user.profilePhoto = imageView.image!.png()
+        
+        let image:UIImage? = UIImage(named:"image_placeholder")   //Default profile photo
+        
+        if let placeHolder = image {
+            let imagedata:NSData? = placeHolder.pngData() as NSData?
+            
+            let file = PFFileObject(name: "image_placeholder.png", data: imagedata! as Data)
+            user["profilePhoto"] = file
+        }
+        
         
         user.signUpInBackground { (success, error) in
             if success {
-                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+                self.performSegue(withIdentifier: "loginToInfo", sender: nil)   //Changed sign up segue
             } else {
                 print("Error: \(error?.localizedDescription)")
             }

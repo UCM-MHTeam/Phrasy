@@ -25,5 +25,8 @@ class InitialMoodViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func goToHomeButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "initialMoodToHome", sender: nil)
+    }
+    
 }

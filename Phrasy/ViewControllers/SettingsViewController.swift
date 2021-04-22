@@ -7,11 +7,14 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class SettingsViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadImage()
 
         // Do any additional setup after loading the view.
     }
@@ -28,6 +31,30 @@ class SettingsViewController: UIViewController {
                 sceneDelegate.window?.rootViewController = loginViewController
             }
         })
+    }
+    
+    
+    func loadImage(){
+        let user = PFUser.current()
+        
+//        let file = user?["profilePhoto"] as! PFFileObject
+//        file.getDataInBackground()
+//        imageView.image = UIImage(data: file as! String)
+//        self.imageView.image = UIImage(named: (user?["profilePhoto"]) as! String)
+        
+        let file = user?["profilePhoto"] as? PFFileObject
+        
+        file?.getDataInBackground{ (imageData: Data?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            }else if let imageData = imageData{
+                let image = UIImage(data: imageData)
+                self.imageView.image = image
+            }
+            
+        }
+        
+        
     }
     
     /*
