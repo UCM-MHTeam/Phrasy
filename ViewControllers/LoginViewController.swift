@@ -7,9 +7,11 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class LoginViewController: UIViewController {
-
+    
+    
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -36,6 +38,7 @@ class LoginViewController: UIViewController {
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text
+//        user.profilePhoto = imageView.image!.png()
         
         user.signUpInBackground { (success, error) in
             if success {
