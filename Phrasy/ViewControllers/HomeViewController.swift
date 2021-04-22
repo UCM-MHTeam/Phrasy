@@ -44,12 +44,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         // Person Cell Design
         cell.contentView.layer.cornerRadius = 24
-//        cell.layer.shadowColor = UIColor.black.cgColor
-//        cell.layer.shadowOpacity = 0.5
-//        cell.layer.shadowOffset = CGSize(width:0,height: 2.0)
-//        cell.layer.shadowRadius = 10
-//        cell.layer.masksToBounds = false
-//        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        cell.layer.shadowColor = UIColor(hex: "#C19422FF")?.cgColor
+        cell.layer.shadowOpacity = 1
+        cell.layer.shadowOffset = CGSize(width: 6.0,height: 6.0)
+        cell.layer.shadowRadius = 0.5
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         return cell
     }
