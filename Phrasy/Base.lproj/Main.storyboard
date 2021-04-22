@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fU6-Qa-vkq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fg-FQ-xHe">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="-3734" y="-352"/>
         </scene>
-        <!--Profile Pic View Controller-->
+        <!--ProfilePicViewController-->
         <scene sceneID="agu-8q-eM2">
             <objects>
-                <viewController id="ooF-3g-R5a" customClass="ProfilePicViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ProfilePicViewController" id="ooF-3g-R5a" customClass="ProfilePicViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3K8-SW-b70">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onSubmitButton:" destination="ooF-3g-R5a" eventType="touchUpInside" id="J80-6r-2LM"/>
                                     <segue destination="FB3-Z5-G0N" kind="presentation" identifier="profilePicToMood" modalPresentationStyle="fullScreen" id="wc8-4y-anS"/>
                                 </connections>
                             </button>
@@ -110,7 +109,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="Uqp-bZ-nqk" id="bOx-bh-xsf"/>
+                        <outlet property="imageView" destination="Uqp-bZ-nqk" id="Y67-hH-nmg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6I-jM-Z6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="-2996" y="-352.17391304347831"/>
         </scene>
-        <!--Initial Mood View Controller-->
+        <!--InitialMoodViewController-->
         <scene sceneID="AxG-95-ZIZ">
             <objects>
-                <viewController id="FB3-Z5-G0N" customClass="InitialMoodViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="InitialMoodViewController" id="FB3-Z5-G0N" customClass="InitialMoodViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fP7-QA-9ut">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +214,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Finish Profile"/>
                                 <connections>
-                                    <segue destination="Xjd-kh-0Hl" kind="presentation" identifier="initialMoodToHome" id="EhQ-yz-SCc"/>
+                                    <segue destination="Xjd-kh-0Hl" kind="presentation" identifier="initialMoodToHome" modalPresentationStyle="fullScreen" id="EhQ-yz-SCc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -232,11 +231,11 @@
             <objects>
                 <viewController title="PhraseEngineViewController" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="PhraseEngineViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F1B-d1-oGh">
-                                <rect key="frame" x="0.0" y="320" width="375" height="278"/>
+                                <rect key="frame" x="0.0" y="320" width="375" height="298"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="127" id="rDv-QE-XTn" customClass="QuestionCell" customModule="Phrasy" customModuleProvider="target">
@@ -373,7 +372,7 @@
             <objects>
                 <viewController title="SettingsViewController" id="Oqt-FF-2P8" customClass="SettingsViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z2L-PO-dkv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-6Y-zfw">
@@ -399,7 +398,7 @@
             <objects>
                 <viewController title="HomeViewController" id="78l-h0-h1D" customClass="HomeViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LQM-hR-DkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6sE-Of-U0n">
@@ -476,7 +475,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="Dz3-Fu-Gad"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1BG-46-sik">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
