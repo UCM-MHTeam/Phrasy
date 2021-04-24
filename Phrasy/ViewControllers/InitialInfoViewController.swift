@@ -9,16 +9,54 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class InitialInfoViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class InitialInfoViewController: UIViewController {
 
 //    @IBOutlet weak var imageView: UIImageView!
 //
+    
+    @IBOutlet weak var firstNameField: UITextField!
+    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    var newFirstName: String = ""
+    var newLastName: String = ""
+    var newUsername: String = ""
+    var newPassword: String = ""
+    var newMood: Int = 0 // change later
+    var newProfPic: UIImage = UIImage(named: "image_placeholder")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onNextButton(_ sender: Any) {
+        
+//        let user = PFUser()
+//        user["firstname"] = firstNameField.text!
+//        user["lastname"] = lastNameField.text!
+//        user.username = usernameField.text
+//        user.password = passwordField.text
+        
+
+    
+
+        
+        // will have to sign up after they have picked a mood
+        
+        
+//        user.signUpInBackground { (success, error) in
+//            if success {
+//                self.performSegue(withIdentifier: "infoToProfilePic", sender: nil)
+//            } else {
+//                print("Error: \(error?.localizedDescription)")
+//            }
+//        }
+        
+    }
+    
     
 //    @IBAction func goHomeButton(_ sender: Any) {
 //        self.performSegue(withIdentifier: "initialSeguewayToFeed", sender: nil)
@@ -68,14 +106,23 @@ class InitialInfoViewController: UIViewController, UIImagePickerControllerDelega
 //        dismiss(animated: true, completion: nil)
 //    }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//     MARK: - Navigation
+//
+//     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+        
+        if segue.identifier == "infoToProfilePic" {
+            let controller = segue.destination as! ProfilePicViewController
+            
+            controller.newUserInfo.append(firstNameField.text!)
+            controller.newUserInfo.append(lastNameField.text!)
+            controller.newUserInfo.append(usernameField.text!)
+            controller.newUserInfo.append(passwordField.text!)
+        }
     }
-    */
+    
 
 }

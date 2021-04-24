@@ -63,6 +63,7 @@
 		31E9D66B261AED3C00BA6D6A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				997B084F26339EE500B57B52 /* Onboarding */,
 				994A47152627B86B008A6D56 /* LoginViewController.swift */,
 				31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */,
 				990E92782627C4D20088C467 /* HomeViewController.swift */,
@@ -124,6 +125,13 @@
 				99809D272627E0920075A531 /* Assets.xcassets */,
 			);
 			path = Phrasy;
+			sourceTree = "<group>";
+		};
+		997B084F26339EE500B57B52 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		99B010E0261D4C35006A53CF /* Fonts */ = {

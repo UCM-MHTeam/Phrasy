@@ -34,20 +34,20 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func SignUp(_ sender: Any) {
-        let user = PFUser()
-        user.username = usernameField.text
-        user.password = passwordField.text
-//        user.profilePhoto = imageView.image!.png()
-        
-        user.signUpInBackground { (success, error) in
-            if success {
-                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
-            } else {
-                print("Error: \(error?.localizedDescription)")
-            }
-        }
-    }
+//    @IBAction func SignUp(_ sender: Any) {
+//        let user = PFUser()
+//        user.username = usernameField.text
+//        user.password = passwordField.text
+////        user.profilePhoto = imageView.image!.png()
+//        
+//        user.signUpInBackground { (success, error) in
+//            if success {
+//                self.performSegue(withIdentifier: "infoToProfilePic", sender: nil)
+//            } else {
+//                print("Error: \(error?.localizedDescription)")
+//            }
+//        }
+//    }
     
 
     /*

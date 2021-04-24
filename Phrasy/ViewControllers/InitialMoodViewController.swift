@@ -9,8 +9,12 @@ import UIKit
 
 class InitialMoodViewController: UIViewController {
 
+    var newUserInfo: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print(" \(newUserInfo[0])  \(newUserInfo[1])  \(newUserInfo[2])  \(newUserInfo[3]) ")
 
         // Do any additional setup after loading the view.
     }
