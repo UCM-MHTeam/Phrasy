@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
 
 class InitialMoodViewController: UIViewController {
 
     var newUserInfo: [String] = []
-    
+    var newProfPic: UIImage? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +22,32 @@ class InitialMoodViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func createUser(_ sender: Any) {
+        let user = PFUser()
+        user.username = newUserInfo[2]
+        user.password = newUserInfo[3]
+        user["firstname"] = newUserInfo[0]
+        user["lastname"] = newUserInfo[1]
+        
+        
+        
+        let imageData =  newProfPic?.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        user["profilePhoto"] = file
+        user.signUpInBackground{ (success, error) in
+            if success{
+                self.performSegue(withIdentifier: "initialMoodToHome", sender: nil)
+            }else{
+                print("Error: \(error?.localizedDescription)")
+            }
+            
+        }
+        
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

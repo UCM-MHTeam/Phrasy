@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fg-FQ-xHe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fg-FQ-xHe">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -114,7 +114,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6I-jM-Z6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="vD1-Ic-vbl">
                     <connections>
-                        <action selector="onCameraButton:" destination="ooF-3g-R5a" id="OCr-kJ-E6E"/>
+                        <action selector="onCameraButton:" destination="ooF-3g-R5a" id="528-6K-whH"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -211,6 +211,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Finish Profile"/>
                                 <connections>
+                                    <action selector="createUser:" destination="FB3-Z5-G0N" eventType="touchUpInside" id="qje-Sp-rZH"/>
                                     <segue destination="Xjd-kh-0Hl" kind="presentation" identifier="initialMoodToHome" modalPresentationStyle="fullScreen" id="EhQ-yz-SCc"/>
                                 </connections>
                             </button>
