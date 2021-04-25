@@ -7,9 +7,11 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class LoginViewController: UIViewController {
-
+    
+    
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -25,26 +27,27 @@ class LoginViewController: UIViewController {
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if user != nil{
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.performSegue(withIdentifier: "loginToInfo", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
         }
     }
     
-    @IBAction func SignUp(_ sender: Any) {
-        let user = PFUser()
-        user.username = usernameField.text
-        user.password = passwordField.text
-        
-        user.signUpInBackground { (success, error) in
-            if success {
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            } else {
-                print("Error: \(error?.localizedDescription)")
-            }
-        }
-    }
+//    @IBAction func SignUp(_ sender: Any) {
+//        let user = PFUser()
+//        user.username = usernameField.text
+//        user.password = passwordField.text
+////        user.profilePhoto = imageView.image!.png()
+//        
+//        user.signUpInBackground { (success, error) in
+//            if success {
+//                self.performSegue(withIdentifier: "infoToProfilePic", sender: nil)
+//            } else {
+//                print("Error: \(error?.localizedDescription)")
+//            }
+//        }
+//    }
     
 
     /*
