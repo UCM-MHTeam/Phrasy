@@ -60,11 +60,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         query.whereKey("from", equalTo: thisUser)
         
         query.findObjectsInBackground { (friends, error) -> Void in
-
-            if (friends != nil) {
-                self.friends = friends!
+            if let friends = friends {
+                self.friends = friends
                 self.friendsView.reloadData()
             }
+
         }
     }
     
@@ -76,6 +76,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCell", for: indexPath) as! PersonCell
         
         let person = friends[indexPath.item].object(forKey: "to") as! PFUser
+        
         do {
             try person.fetchIfNeeded()
             print(person["firstname"] ?? "nil")
@@ -105,6 +106,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.layer.shadowRadius = 0.5
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        
+        let imageView = cell.personImage.layer
+        imageView.cornerRadius = 0.5 * imageView.bounds.width
         
         return cell
     }
