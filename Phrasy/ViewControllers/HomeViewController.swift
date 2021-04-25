@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
 
     @IBOutlet weak var friendsView: UICollectionView!
+    
+    var friends = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +33,97 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = .red
+        
+//        let query =
+        let thisUser = PFUser.current()
+        
+        do {
+            let targetUser = try PFQuery.getUserObject(withId: "FjOezMSP32")
+            print(targetUser.username ?? "not found :(")
+            print(thisUser?.username ?? "not found :(")
+            
+            let follow = PFObject(className: "Follow")
+            let followback = PFObject(className: "Follow")
+
+            follow.setObject(thisUser!, forKey: "from")
+            follow.setObject(targetUser, forKey: "to")
+            follow.saveInBackground()
+
+            followback.setObject(targetUser, forKey: "from")
+            followback.setObject(thisUser!, forKey: "to")
+            followback.saveInBackground()
+            
+ 
+            
+
+            
+//            self.friends.append(targetUser)
+//            thisUser?.add(self.friends, forKey: "friends")
+//            thisUser?.saveInBackground(block: { (success, error) in
+//                if success {
+//                    self.dismiss(animated: true, completion: nil)
+//                    print("friend should save")
+//                } else {
+//                    print("didnt work")
+//                }
+//            })
+            
+//            let currentFriendsList = thisUser?.object(forKey: "friends") as! NSArray
+            
+
+        } catch {
+            print(error)
+        }
+        
+        let query = PFQuery(className: "Follow")
+        query.whereKey("from", equalTo: thisUser)
+        
+        query.findObjectsInBackground { (friends, error) -> Void in
+
+            if (friends != nil) {
+                self.friends = friends!
+                self.friendsView.reloadData()
+            }
+            
+            if let friendsList = friends {
+                for o in friendsList {
+                    let otherUse = o.object(forKey: "to") as? PFUser
+                    do {
+                        try otherUse?.fetchIfNeeded()
+                    } catch {
+                        print(error)
+                    }
+//                    print(otherUse?.username! ?? "does not work")
+                    print(otherUse?["firstname"] ?? "nil")
+                }
+            }
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return friends.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCell", for: indexPath) as! PersonCell
-
-        cell.personNameLabel.text = "Drake B."
-        cell.personImage.image = UIImage(named: "profile-avatar")
+        
+        let person = friends[indexPath.item].object(forKey: "to") as! PFUser
+//        cell.personNameLabel.text = "Drake B."
+//        cell.personImage.image = UIImage(named: "profile-avatar")
+        
+        let firstName = person["firstname"] as? String
+        let lastName = person["lastname"] as? String
+        
+        let profImage = person["profilePhoto"] as! PFFileObject
+        let urlString = profImage.url!
+        let url = URL(string: urlString)!
+//        image.getDataInBackground()
+        
+        cell.personNameLabel.text = firstName! + lastName!
+        cell.personImage.af.setImage(withURL: url)
         
         // Person Cell Design
         cell.contentView.layer.cornerRadius = 24
@@ -69,6 +152,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     */
     
     lazy var gradient: CAGradientLayer = {
+        
+        
         let gradient = CAGradientLayer()
         gradient.type = .axial
         gradient.colors = [

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fg-FQ-xHe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fU6-Qa-vkq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -164,6 +164,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kja-Cb-zij"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="u9Z-Go-m5F" appends="YES" id="XFq-nE-xx6"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="firstNameField" destination="AHF-bR-abX" id="fxD-VQ-3ts"/>
@@ -173,6 +177,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rab-BU-zhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u9Z-Go-m5F">
+                    <connections>
+                        <action selector="onTap:" destination="4fg-FQ-xHe" id="88E-rz-4gl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2996" y="-352.17391304347831"/>
         </scene>
@@ -249,7 +258,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What question did they ask you?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oY-c0-Woa" userLabel="QuestionLabel">
-                                                    <rect key="frame" x="16" y="10" width="349" height="23.5"/>
+                                                    <rect key="frame" x="16" y="10" width="349" height="33"/>
                                                     <fontDescription key="fontDescription" name="CatamaranRoman-Bold" family="Catamaran" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -524,13 +533,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EhQ-yz-SCc"/>
+        <segue reference="BXr-SY-sl8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="banner" width="179" height="82"/>
         <image name="bubble.middle.bottom" catalog="system" width="128" height="110"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="house" catalog="system" width="128" height="106"/>
         <image name="image_placeholder" width="375" height="375"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

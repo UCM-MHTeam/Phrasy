@@ -1,5 +1,5 @@
 //
-//  rgbToHex.swift
+//  ColorHexConverter.swift
 //  Phrasy
 //
 //  Created by Marty Nodado on 4/18/21.

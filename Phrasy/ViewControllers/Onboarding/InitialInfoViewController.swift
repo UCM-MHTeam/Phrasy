@@ -32,6 +32,11 @@ class InitialInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onTap(_ sender: Any) {
+        print("Boop")
+        view.endEditing(true)
+    }
+    
     @IBAction func onNextButton(_ sender: Any) {
         
 //        let user = PFUser()

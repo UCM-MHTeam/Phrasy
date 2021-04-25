@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E75D3D262A8DE600761EF7 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E75D3C262A8DE600761EF7 /* DisclaimerViewController.swift */; };
+		05E75D3D262A8DE600761EF7 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
 		3103954326314B43005169F3 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103954226314B43005169F3 /* ProfilePicViewController.swift */; };
 		3103954626314BB9005169F3 /* InitialMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103954526314BB9005169F3 /* InitialMoodViewController.swift */; };
@@ -21,7 +21,7 @@
 		99182015261AE00F0084CA33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99182013261AE00F0084CA33 /* Main.storyboard */; };
 		994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A47152627B86B008A6D56 /* LoginViewController.swift */; };
 		996E8878262C21E70030E710 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E8877262C21E70030E710 /* PersonCell.swift */; };
-		996E8886262D263D0030E710 /* rgbToHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E8885262D263D0030E710 /* rgbToHex.swift */; };
+		997B085B2634EF0C00B57B52 /* ColorHexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B085A2634EF0C00B57B52 /* ColorHexConverter.swift */; };
 		99809D242627D40A0075A531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99809D232627D40A0075A531 /* LaunchScreen.storyboard */; };
 		99809D282627E0920075A531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99809D272627E0920075A531 /* Assets.xcassets */; };
 		99B010E3261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */; };
@@ -45,7 +45,7 @@
 		9918201B261AE0140084CA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		994A47152627B86B008A6D56 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		996E8877262C21E70030E710 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
-		996E8885262D263D0030E710 /* rgbToHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgbToHex.swift; sourceTree = "<group>"; };
+		997B085A2634EF0C00B57B52 /* ColorHexConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConverter.swift; sourceTree = "<group>"; };
 		99809D232627D40A0075A531 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99809D272627E0920075A531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Catamaran-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -68,7 +68,6 @@
 		05E75D3A262A8DB700761EF7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				05E75D3C262A8DE600761EF7 /* DisclaimerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -81,9 +80,6 @@
 				31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */,
 				990E92782627C4D20088C467 /* HomeViewController.swift */,
 				990E927F2627C6BD0088C467 /* SettingsViewController.swift */,
-				317B6048262A91E400A0EF10 /* InitialInfoViewController.swift */,
-				3103954226314B43005169F3 /* ProfilePicViewController.swift */,
-				3103954526314BB9005169F3 /* InitialMoodViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -138,7 +134,7 @@
 				9918201B261AE0140084CA33 /* Info.plist */,
 				99809D232627D40A0075A531 /* LaunchScreen.storyboard */,
 				99809D272627E0920075A531 /* Assets.xcassets */,
-				996E8885262D263D0030E710 /* rgbToHex.swift */,
+				997B085A2634EF0C00B57B52 /* ColorHexConverter.swift */,
 			);
 			path = Phrasy;
 			sourceTree = "<group>";
@@ -146,6 +142,9 @@
 		997B084F26339EE500B57B52 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				3103954526314BB9005169F3 /* InitialMoodViewController.swift */,
+				3103954226314B43005169F3 /* ProfilePicViewController.swift */,
+				317B6048262A91E400A0EF10 /* InitialInfoViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -281,7 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E75D3D262A8DE600761EF7 /* DisclaimerViewController.swift in Sources */,
+				997B085B2634EF0C00B57B52 /* ColorHexConverter.swift in Sources */,
+				05E75D3D262A8DE600761EF7 /* (null) in Sources */,
 				994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				317B6049262A91E400A0EF10 /* InitialInfoViewController.swift in Sources */,

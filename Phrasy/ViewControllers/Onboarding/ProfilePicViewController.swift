@@ -36,6 +36,7 @@ class ProfilePicViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+                
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)

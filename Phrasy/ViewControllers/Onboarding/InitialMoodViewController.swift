@@ -31,7 +31,7 @@ class InitialMoodViewController: UIViewController {
         
         
         
-        let imageData =  newProfPic?.pngData()
+        let imageData =  newProfPic?.jpegData(compressionQuality: 0.5)
         let file = PFFileObject(name: "image.png", data: imageData!)
         let friendsArray = [[PFObject]]()
         
