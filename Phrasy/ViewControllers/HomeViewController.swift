@@ -34,46 +34,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = .red
         
-//        let query =
         let thisUser = PFUser.current()
         
-        do {
-            let targetUser = try PFQuery.getUserObject(withId: "FjOezMSP32")
-            print(targetUser.username ?? "not found :(")
-            print(thisUser?.username ?? "not found :(")
-            
-            let follow = PFObject(className: "Follow")
-            let followback = PFObject(className: "Follow")
-
-            follow.setObject(thisUser!, forKey: "from")
-            follow.setObject(targetUser, forKey: "to")
-            follow.saveInBackground()
-
-            followback.setObject(targetUser, forKey: "from")
-            followback.setObject(thisUser!, forKey: "to")
-            followback.saveInBackground()
-            
- 
-            
-
-            
-//            self.friends.append(targetUser)
-//            thisUser?.add(self.friends, forKey: "friends")
-//            thisUser?.saveInBackground(block: { (success, error) in
-//                if success {
-//                    self.dismiss(animated: true, completion: nil)
-//                    print("friend should save")
-//                } else {
-//                    print("didnt work")
-//                }
-//            })
-            
-//            let currentFriendsList = thisUser?.object(forKey: "friends") as! NSArray
-            
-
-        } catch {
-            print(error)
-        }
+//        do {
+//
+//            // Debug: change "ID" to a preexisting UserID in Parse
+//            let targetUser = try PFQuery.getUserObject(withId: "FjOezMSP32")
+//            print(targetUser.username ?? "not found :(")
+//            print(thisUser?.username ?? "not found :(")
+//
+//            let follow = PFObject(className: "Follow")
+//            let followback = PFObject(className: "Follow")
+//
+//            follow.setObject(thisUser!, forKey: "from")
+//            follow.setObject(targetUser, forKey: "to")
+//            follow.saveInBackground()
+//
+//            followback.setObject(targetUser, forKey: "from")
+//            followback.setObject(thisUser!, forKey: "to")
+//            followback.saveInBackground()
+//
+//        } catch { print(error) }
         
         let query = PFQuery(className: "Follow")
         query.whereKey("from", equalTo: thisUser)
@@ -84,23 +65,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 self.friends = friends!
                 self.friendsView.reloadData()
             }
-            
-            if let friendsList = friends {
-                for o in friendsList {
-                    let otherUse = o.object(forKey: "to") as? PFUser
-                    do {
-                        try otherUse?.fetchIfNeeded()
-                    } catch {
-                        print(error)
-                    }
-//                    print(otherUse?.username! ?? "does not work")
-                    print(otherUse?["firstname"] ?? "nil")
-                }
-            }
         }
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -111,6 +76,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCell", for: indexPath) as! PersonCell
         
         let person = friends[indexPath.item].object(forKey: "to") as! PFUser
+        do {
+            try person.fetchIfNeeded()
+            print(person["firstname"] ?? "nil")
+        } catch {
+            
+        }
+        
 //        cell.personNameLabel.text = "Drake B."
 //        cell.personImage.image = UIImage(named: "profile-avatar")
         
@@ -129,13 +101,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.contentView.layer.cornerRadius = 24
         cell.layer.shadowColor = UIColor(hex: "#C19422FF")?.cgColor
         cell.layer.shadowOpacity = 1
-        cell.layer.shadowOffset = CGSize(width: 6.0,height: 6.0)
+        cell.layer.shadowOffset = CGSize(width: -6.0,height: -6.0)
         cell.layer.shadowRadius = 0.5
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         return cell
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("pressed cell #\(indexPath.item)")
@@ -152,8 +125,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     */
     
     lazy var gradient: CAGradientLayer = {
-        
-        
         let gradient = CAGradientLayer()
         gradient.type = .axial
         gradient.colors = [
@@ -164,6 +135,5 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         gradient.endPoint = CGPoint(x: 1.5, y: 1.5)
         return gradient
     }()
-
 }
 
