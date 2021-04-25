@@ -33,8 +33,10 @@ class InitialMoodViewController: UIViewController {
         
         let imageData =  newProfPic?.pngData()
         let file = PFFileObject(name: "image.png", data: imageData!)
+        let friendsArray = [[PFObject]]()
         
         user["profilePhoto"] = file
+        user["friends"] = friendsArray
         user.signUpInBackground{ (success, error) in
             if success{
                 self.performSegue(withIdentifier: "initialMoodToHome", sender: nil)
