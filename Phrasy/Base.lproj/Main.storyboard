@@ -66,7 +66,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rr9-M2-rcx"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="3s5-eQ-JvT" id="zAZ-5j-KV3"/>
@@ -113,7 +113,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uFc-bz-KtB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="9Ns-gL-g2k">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Yd8-EA-Mqg">
@@ -179,7 +179,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kja-Cb-zij"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="u9Z-Go-m5F" appends="YES" id="XFq-nE-xx6"/>
@@ -199,7 +199,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2996" y="-352.17391304347831"/>
+            <point key="canvasLocation" x="-3001" y="-352"/>
         </scene>
         <!--InitialMoodViewController-->
         <scene sceneID="AxG-95-ZIZ">
@@ -247,7 +247,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PGe-Rl-MOt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.21176470588235294" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOn-Wx-OBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -393,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-495.19999999999999" y="1207.6461769115442"/>
+            <point key="canvasLocation" x="-1434" y="1207"/>
         </scene>
         <!--SettingsViewController-->
         <scene sceneID="1FD-WO-3Wu">
@@ -551,7 +551,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KW3-ak-XjM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="1207.6461769115442"/>
+            <point key="canvasLocation" x="-479" y="1207"/>
         </scene>
         <!--Home-->
         <scene sceneID="paM-VX-2mr">
@@ -631,7 +631,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BXr-SY-sl8"/>
+        <segue reference="EhQ-yz-SCc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="banner" width="179" height="82"/>
