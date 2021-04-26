@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05F56C9A263682A500681C4E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F56C99263682A500681C4E /* SearchTableViewController.swift */; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
 		3103954326314B43005169F3 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103954226314B43005169F3 /* ProfilePicViewController.swift */; };
 		3103954626314BB9005169F3 /* InitialMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103954526314BB9005169F3 /* InitialMoodViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05F56C99263682A500681C4E /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		3103954226314B43005169F3 /* ProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
 		3103954526314BB9005169F3 /* InitialMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMoodViewController.swift; sourceTree = "<group>"; };
 		312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				317B6048262A91E400A0EF10 /* InitialInfoViewController.swift */,
 				3103954226314B43005169F3 /* ProfilePicViewController.swift */,
 				3103954526314BB9005169F3 /* InitialMoodViewController.swift */,
+				05F56C99263682A500681C4E /* SearchTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				99B010EE261E5545006A53CF /* AnswerChoiceCell.swift in Sources */,
 				3103954326314B43005169F3 /* ProfilePicViewController.swift in Sources */,
 				31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */,
+				05F56C9A263682A500681C4E /* SearchTableViewController.swift in Sources */,
 				990E92792627C4D20088C467 /* HomeViewController.swift in Sources */,
 				3103954626314BB9005169F3 /* InitialMoodViewController.swift in Sources */,
 				99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */,
