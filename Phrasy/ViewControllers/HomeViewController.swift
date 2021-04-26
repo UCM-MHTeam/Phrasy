@@ -27,7 +27,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //        let imageView = UIImageView(image: logo)
 //        imageView.contentMode = .scaleAspectFit
 //        self.navigationItem.titleView = imageView
-//        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "#060606FF")
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "#060606FF")
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
