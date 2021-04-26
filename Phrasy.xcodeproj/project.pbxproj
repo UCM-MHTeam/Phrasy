@@ -10,6 +10,7 @@
 		05F56C9A263682A500681C4E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F56C99263682A500681C4E /* SearchTableViewController.swift */; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
 		312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */; };
+		31491F352636949C0048C8DE /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31491F342636949C0048C8DE /* UserCell.swift */; };
 		31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */; };
 		990E92792627C4D20088C467 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E92782627C4D20088C467 /* HomeViewController.swift */; };
 		990E92802627C6BD0088C467 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E927F2627C6BD0088C467 /* SettingsViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		05F56C99263682A500681C4E /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		31491F342636949C0048C8DE /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseEngineViewController.swift; sourceTree = "<group>"; };
 		63768546924F9025BA8AB497 /* Pods_Phrasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phrasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7473B7F3E8BC4E387E339B50 /* Pods-Phrasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phrasy.debug.xcconfig"; path = "Target Support Files/Pods-Phrasy/Pods-Phrasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */,
 				99B010ED261E5545006A53CF /* AnswerChoiceCell.swift */,
 				996E8877262C21E70030E710 /* PersonCell.swift */,
+				31491F342636949C0048C8DE /* UserCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				99B010EE261E5545006A53CF /* AnswerChoiceCell.swift in Sources */,
 				31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */,
 				05F56C9A263682A500681C4E /* SearchTableViewController.swift in Sources */,
+				31491F352636949C0048C8DE /* UserCell.swift in Sources */,
 				996E8878262C21E70030E710 /* PersonCell.swift in Sources */,
 				990E92792627C4D20088C467 /* HomeViewController.swift in Sources */,
 				997B08742636901A00B57B52 /* InitialMoodViewController.swift in Sources */,
