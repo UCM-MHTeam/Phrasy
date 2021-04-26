@@ -33,7 +33,7 @@ class InitialMoodViewController: UIViewController {
         
         let imageData =  newProfPic?.pngData()
         let file = PFFileObject(name: "image.png", data: imageData!)
-        let friendsArray = [[PFObject]]()
+        let friendsArray = [[PFObject]]()                           //pf objects to establish friendship
         
         user["profilePhoto"] = file
         user["friends"] = friendsArray
