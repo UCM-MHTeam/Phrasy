@@ -14,10 +14,16 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setGradient()
 
+        self.signUpButton.layer.cornerRadius = 18
+        self.signInButton.layer.cornerRadius = 18
+        
         // Do any additional setup after loading the view.
     }
     
@@ -34,30 +40,8 @@ class LoginViewController: UIViewController {
         }
     }
     
-//    @IBAction func SignUp(_ sender: Any) {
-//        let user = PFUser()
-//        user.username = usernameField.text
-//        user.password = passwordField.text
-////        user.profilePhoto = imageView.image!.png()
-//        
-//        user.signUpInBackground { (success, error) in
-//            if success {
-//                self.performSegue(withIdentifier: "infoToProfilePic", sender: nil)
-//            } else {
-//                print("Error: \(error?.localizedDescription)")
-//            }
-//        }
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setGradient() {
+        gradient.frame = view.bounds
+        self.view.layer.insertSublayer(gradient, at: 0)
     }
-    */
-
 }
