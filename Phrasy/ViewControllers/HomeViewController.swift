@@ -95,12 +95,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
 
     func transparentNavBar() {
-        let navbar = self.navigationController?.navigationBar
-        navbar!.barTintColor = UIColor(hex: "#060606FF")
-        navbar!.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navbar!.shadowImage = UIImage()
-        navbar!.isTranslucent = true
-        navbar!.tintColor = .red
+        let navbar = self.navigationController!.navigationBar as UINavigationBar
+        navbar.barTintColor = UIColor(hex: "#060606FF")
+        navbar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navbar.shadowImage = UIImage()
+        navbar.isTranslucent = true
+        navbar.tintColor = .red
     }
     
     func setGradient() {
