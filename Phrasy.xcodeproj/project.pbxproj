@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		05F56C9A263682A500681C4E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F56C99263682A500681C4E /* SearchTableViewController.swift */; };
 		0F032556BD29E0026D50B71B /* Pods_Phrasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63768546924F9025BA8AB497 /* Pods_Phrasy.framework */; };
-		3103954326314B43005169F3 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103954226314B43005169F3 /* ProfilePicViewController.swift */; };
-		3103954626314BB9005169F3 /* InitialMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103954526314BB9005169F3 /* InitialMoodViewController.swift */; };
 		312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */; };
-		317B6049262A91E400A0EF10 /* InitialInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317B6048262A91E400A0EF10 /* InitialInfoViewController.swift */; };
 		31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */; };
 		990E92792627C4D20088C467 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E92782627C4D20088C467 /* HomeViewController.swift */; };
 		990E92802627C6BD0088C467 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E927F2627C6BD0088C467 /* SettingsViewController.swift */; };
@@ -22,6 +19,9 @@
 		994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A47152627B86B008A6D56 /* LoginViewController.swift */; };
 		996E8878262C21E70030E710 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E8877262C21E70030E710 /* PersonCell.swift */; };
 		997B085B2634EF0C00B57B52 /* ColorHexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B085A2634EF0C00B57B52 /* ColorHexConverter.swift */; };
+		997B08722636901A00B57B52 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B086F2636901A00B57B52 /* ProfilePicViewController.swift */; };
+		997B08732636901A00B57B52 /* InitialInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B08702636901A00B57B52 /* InitialInfoViewController.swift */; };
+		997B08742636901A00B57B52 /* InitialMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B08712636901A00B57B52 /* InitialMoodViewController.swift */; };
 		99809D242627D40A0075A531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99809D232627D40A0075A531 /* LaunchScreen.storyboard */; };
 		99809D282627E0920075A531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99809D272627E0920075A531 /* Assets.xcassets */; };
 		99B010E3261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */; };
@@ -30,10 +30,7 @@
 
 /* Begin PBXFileReference section */
 		05F56C99263682A500681C4E /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		3103954226314B43005169F3 /* ProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
-		3103954526314BB9005169F3 /* InitialMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMoodViewController.swift; sourceTree = "<group>"; };
 		312B4DC3261AF4CC007E22B9 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
-		317B6048262A91E400A0EF10 /* InitialInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialInfoViewController.swift; sourceTree = "<group>"; };
 		31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseEngineViewController.swift; sourceTree = "<group>"; };
 		63768546924F9025BA8AB497 /* Pods_Phrasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Phrasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7473B7F3E8BC4E387E339B50 /* Pods-Phrasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phrasy.debug.xcconfig"; path = "Target Support Files/Pods-Phrasy/Pods-Phrasy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +44,9 @@
 		994A47152627B86B008A6D56 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		996E8877262C21E70030E710 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		997B085A2634EF0C00B57B52 /* ColorHexConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConverter.swift; sourceTree = "<group>"; };
+		997B086F2636901A00B57B52 /* ProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
+		997B08702636901A00B57B52 /* InitialInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialInfoViewController.swift; sourceTree = "<group>"; };
+		997B08712636901A00B57B52 /* InitialMoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialMoodViewController.swift; sourceTree = "<group>"; };
 		99809D232627D40A0075A531 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99809D272627E0920075A531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Catamaran-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -81,9 +81,6 @@
 				31E9D66C261AED7600BA6D6A /* PhraseEngineViewController.swift */,
 				990E92782627C4D20088C467 /* HomeViewController.swift */,
 				990E927F2627C6BD0088C467 /* SettingsViewController.swift */,
-				317B6048262A91E400A0EF10 /* InitialInfoViewController.swift */,
-				3103954226314B43005169F3 /* ProfilePicViewController.swift */,
-				3103954526314BB9005169F3 /* InitialMoodViewController.swift */,
 				05F56C99263682A500681C4E /* SearchTableViewController.swift */,
 			);
 			path = ViewControllers;
@@ -147,9 +144,9 @@
 		997B084F26339EE500B57B52 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				3103954526314BB9005169F3 /* InitialMoodViewController.swift */,
-				3103954226314B43005169F3 /* ProfilePicViewController.swift */,
-				317B6048262A91E400A0EF10 /* InitialInfoViewController.swift */,
+				997B08702636901A00B57B52 /* InitialInfoViewController.swift */,
+				997B08712636901A00B57B52 /* InitialMoodViewController.swift */,
+				997B086F2636901A00B57B52 /* ProfilePicViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -286,20 +283,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				997B085B2634EF0C00B57B52 /* ColorHexConverter.swift in Sources */,
-				05E75D3D262A8DE600761EF7 /* (null) in Sources */,
 				994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
-				317B6049262A91E400A0EF10 /* InitialInfoViewController.swift in Sources */,
 				312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */,
+				997B08722636901A00B57B52 /* ProfilePicViewController.swift in Sources */,
 				99B010EE261E5545006A53CF /* AnswerChoiceCell.swift in Sources */,
-				3103954326314B43005169F3 /* ProfilePicViewController.swift in Sources */,
 				31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */,
 				05F56C9A263682A500681C4E /* SearchTableViewController.swift in Sources */,
 				996E8878262C21E70030E710 /* PersonCell.swift in Sources */,
 				990E92792627C4D20088C467 /* HomeViewController.swift in Sources */,
-				3103954626314BB9005169F3 /* InitialMoodViewController.swift in Sources */,
+				997B08742636901A00B57B52 /* InitialMoodViewController.swift in Sources */,
 				99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */,
 				990E92802627C6BD0088C467 /* SettingsViewController.swift in Sources */,
+				997B08732636901A00B57B52 /* InitialInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

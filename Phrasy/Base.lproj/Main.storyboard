@@ -482,6 +482,9 @@
                     <navigationItem key="navigationItem" id="Hrt-aW-H7k">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.2.fill" catalog="system" id="mQi-yW-Akf">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="rz7-3W-qee" kind="show" id="TxK-2U-FpV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -491,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYa-86-aMx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543.2" y="1207.6461769115442"/>
+            <point key="canvasLocation" x="-2482" y="2011"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Llk-1y-dIV">
@@ -581,13 +584,14 @@
                             <outlet property="delegate" destination="rz7-3W-qee" id="U3W-P9-3iX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="ssi-lz-2Sb"/>
                     <connections>
                         <outlet property="searchBar" destination="ZuG-Cs-4ov" id="hfq-Uj-aOf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwj-kA-beZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1895" y="-1159"/>
+            <point key="canvasLocation" x="-2482" y="2780"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
