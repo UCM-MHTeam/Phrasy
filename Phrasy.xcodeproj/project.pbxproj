@@ -23,6 +23,7 @@
 		997B08722636901A00B57B52 /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B086F2636901A00B57B52 /* ProfilePicViewController.swift */; };
 		997B08732636901A00B57B52 /* InitialInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B08702636901A00B57B52 /* InitialInfoViewController.swift */; };
 		997B08742636901A00B57B52 /* InitialMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B08712636901A00B57B52 /* InitialMoodViewController.swift */; };
+		997B088626373AA300B57B52 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B088526373AA300B57B52 /* BackgroundGradient.swift */; };
 		99809D242627D40A0075A531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99809D232627D40A0075A531 /* LaunchScreen.storyboard */; };
 		99809D282627E0920075A531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99809D272627E0920075A531 /* Assets.xcassets */; };
 		99B010E3261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */; };
@@ -49,6 +50,7 @@
 		997B086F2636901A00B57B52 /* ProfilePicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
 		997B08702636901A00B57B52 /* InitialInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialInfoViewController.swift; sourceTree = "<group>"; };
 		997B08712636901A00B57B52 /* InitialMoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialMoodViewController.swift; sourceTree = "<group>"; };
+		997B088526373AA300B57B52 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
 		99809D232627D40A0075A531 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99809D272627E0920075A531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99B010E2261D4F68006A53CF /* Catamaran-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Catamaran-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				99809D232627D40A0075A531 /* LaunchScreen.storyboard */,
 				99809D272627E0920075A531 /* Assets.xcassets */,
 				997B085A2634EF0C00B57B52 /* ColorHexConverter.swift */,
+				997B088526373AA300B57B52 /* BackgroundGradient.swift */,
 			);
 			path = Phrasy;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				997B085B2634EF0C00B57B52 /* ColorHexConverter.swift in Sources */,
+				997B088626373AA300B57B52 /* BackgroundGradient.swift in Sources */,
 				994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */,

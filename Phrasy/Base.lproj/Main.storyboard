@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fU6-Qa-vkq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fU6-Qa-vkq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -460,7 +460,7 @@
                                 </cells>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="NrS-0O-X6o">
-                                <rect key="frame" x="8" y="-4" width="151" height="56"/>
+                                <rect key="frame" x="8" y="-8" width="151" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NrS-0O-X6o" secondAttribute="height" multiplier="151:56" id="5Oe-9y-okO"/>
                                     <constraint firstAttribute="height" constant="56" id="kaE-aX-Plt"/>
@@ -476,7 +476,7 @@
                             <constraint firstItem="6sE-Of-U0n" firstAttribute="trailing" secondItem="Tjx-AB-rPO" secondAttribute="trailing" id="cFp-uv-lrT"/>
                             <constraint firstAttribute="bottom" secondItem="6sE-Of-U0n" secondAttribute="bottom" id="co7-2K-7Pg"/>
                             <constraint firstItem="6sE-Of-U0n" firstAttribute="top" secondItem="Tjx-AB-rPO" secondAttribute="top" id="g4q-yP-qDU"/>
-                            <constraint firstItem="NrS-0O-X6o" firstAttribute="top" secondItem="Tjx-AB-rPO" secondAttribute="top" constant="-48" id="uWh-FI-T85"/>
+                            <constraint firstItem="NrS-0O-X6o" firstAttribute="top" secondItem="Tjx-AB-rPO" secondAttribute="top" constant="-52" id="uWh-FI-T85"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hrt-aW-H7k">
@@ -537,11 +537,11 @@
             </objects>
             <point key="canvasLocation" x="460" y="1207.6461769115442"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="paM-VX-2mr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kna-Ko-s1N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Koz-Zy-aPC"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Koz-Zy-aPC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pkh-cG-N9K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -559,7 +559,7 @@
         <!--Search Table View Controller-->
         <scene sceneID="C1V-Aa-ejU">
             <objects>
-                <tableViewController id="rz7-3W-qee" customClass="SearchTableViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="rz7-3W-qee" customClass="SearchTableViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fbB-a2-INt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -621,6 +621,7 @@
         <image name="banner" width="179" height="82"/>
         <image name="bubble.middle.bottom" catalog="system" width="128" height="110"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <systemColor name="secondaryLabelColor">

@@ -65,12 +65,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let firstName = person["firstname"] as? String
         let lastName = person["lastname"] as? String
+        let lastIniital = String(lastName![lastName!.index(lastName!.startIndex, offsetBy: 0)])
         
         let profImage = person["profilePhoto"] as! PFFileObject
         let urlString = profImage.url!
         let url = URL(string: urlString)!
         
-        cell.personNameLabel.text = firstName! + lastName!
+        cell.personNameLabel.text = firstName! + " " + lastIniital + "."
         cell.personImage.af.setImage(withURL: url)
         
         // Person Cell Design
@@ -105,19 +106,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func setGradient() {
         gradient.frame = view.bounds
-        view.layer.insertSublayer(gradient, at: 0)
+        self.view.layer.insertSublayer(gradient, at: 0)
     }
-    
-    lazy var gradient: CAGradientLayer = {
-        let gradient = CAGradientLayer()
-        gradient.type = .axial
-        gradient.colors = [
-            UIColor(hex: "#3673C7FF")!.cgColor,
-            UIColor(hex: "#63D47CFF")!.cgColor
-        ]
-        gradient.startPoint = CGPoint(x: -0.5, y: -0.5)
-        gradient.endPoint = CGPoint(x: 1.5, y: 1.5)
-        return gradient
-    }()
 }
 
