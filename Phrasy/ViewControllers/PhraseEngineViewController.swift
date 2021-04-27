@@ -18,11 +18,13 @@ class PhraseEngineViewController: UIViewController {
     
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var formPhraseButton: UIButton!
+    @IBOutlet weak var personImage: UIImageView!
     
     let QuestionsList: [Question] = [
         Question(questionString: "What did they ask you?",
-                 answers: ["How are you feeling?", "How ya doing?"]),
-        Question(questionString: "What best descrives what you're feeling now?",
+                 answers: ["How are you feeling?", "What do you need right now?", "Is there anything I can do for you?"]),
+        Question(questionString: "What best describes what you're feeling now?",
                  answers: ["anxious","unhappy","exhausted","angry","worried","afraid","pessimistic","uncomfortable","disappointed","confused","frustrated"]),
         Question(questionString: "What do you need right now?",
                  answers: ["some alone time", "someone to vent to", "some company", "to make a decision", "to take action on something"]),
@@ -33,6 +35,10 @@ class PhraseEngineViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let buttonView = self.formPhraseButton.layer
+        buttonView.cornerRadius = 0.5 * buttonView.bounds.width
+        self.personImage.image = UIImage(named: "profile-avatar")
     }
     
     @IBAction func formPhrase(_ sender: Any) {
@@ -42,6 +48,8 @@ class PhraseEngineViewController: UIViewController {
     @objc func formPhraseLabel() {
         self.phraseLabel.text = "Hey, I'm feeling \(choice[1]) right now and I need \(choice[2]). Will you \(choice[3])?"
     }
+    
+    
 }
 
 

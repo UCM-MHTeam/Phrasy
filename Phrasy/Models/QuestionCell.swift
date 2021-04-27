@@ -59,6 +59,29 @@ extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionView
             
             choice[questionIndex] = self.QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
         }
+        
+        // Cell Design
+        
+        // Color
+        switch questionIndex {
+        case 0: cell.backgroundColor = UIColor(hex: "#CC5050FF")
+        case 1: cell.backgroundColor = UIColor(hex: "#5089CCFF")
+        case 2: cell.backgroundColor = UIColor(hex: "#826CC0FF")
+        case 3: cell.backgroundColor = UIColor(hex: "#67CAA0FF")
+        default: cell.backgroundColor = UIColor(hex: "#CC8B50FF")
+        }
+        
+        cell.layer.cornerRadius = 20.0
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width:0,height: 4.0)
+        cell.layer.shadowRadius = 2
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius: cell.layer.cornerRadius).cgPath
+        
+        
+        
+        
         return cell
     }
 }
