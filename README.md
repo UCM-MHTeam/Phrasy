@@ -28,11 +28,11 @@ Mental health and mental illness can be tough to deal with, especially when comm
 
 **Required Must-have Stories**
 
-- [ ] User can log-in
-- [ ] User can register for an account
-- [ ] User can view other user status' at a glance (only among friends)
-- [ ] User can find friends through a query
-- [ ] User can view a list of (CA-local) hotlines, wellness centers, etc
+- [x] User can log-in
+- [x] User can register for an account
+- [x] User can view other user status' at a glance (only among friends)
+- [x] User can find friends through a query
+- [x] User can view a list of (CA-local) hotlines, wellness centers, etc
 - [x] **User can draft a message based on certain criteria**
     * Uses a survey form to suggest phrases based on their mood, intention, etc. for a message to send
 
