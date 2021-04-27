@@ -23,7 +23,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         refreshFriends.addTarget(self, action: #selector(loadFriends), for: .valueChanged)
         friendsView.refreshControl = refreshFriends
         
-        setGradient()
         transparentNavBar()
 //        self.loadFriends()
         
@@ -45,6 +44,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setGradient()
     }
     
     @objc func loadFriends() {
@@ -90,10 +90,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
 //        var moodColor = "#C19422FF"
         
-//        if(person["moodColorId"] != nil){
-//            moodColor = (person["moodColorId"] as? String)!
-//        }
-        let moodColor = person["moodColorId"] as! String
+        var moodColor = person["moodColorId"] as? String
+        if moodColor == nil {
+            moodColor = "#FF0000FF"
+        }
 //        print(moodColor ?? "Fail")
         
         
@@ -101,7 +101,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //        let cellLayer = cell.layer
         cell.contentView.layer.cornerRadius = 24
 //        cellLayer.shadowColor = UIColor(hex: "#C19422FF")?.cgColor
-        cell.contentView.backgroundColor = UIColor(hex: moodColor)
+        cell.contentView.backgroundColor = UIColor(hex: moodColor!)
         
 //        cellLayer.shadowOpacity = 1
 //        cellLayer.shadowOffset = CGSize(width: -6.0,height: -6.0)

@@ -12,9 +12,12 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradient()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setGradient()
     }
     
     @IBAction func onLogoutButton(_ sender: Any) {

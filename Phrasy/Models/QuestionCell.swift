@@ -57,7 +57,7 @@ extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionView
             print("button pressed", indexPath)
             print(collectionView.tag)
             
-            choice[questionIndex] = self.QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
+            choice[questionIndex] = QuestionsList[questionIndex].answers?[answerIndex] ?? "default"
         }
         
         // Cell Design
