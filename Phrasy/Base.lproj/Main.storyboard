@@ -103,9 +103,6 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" systemColor="secondaryLabelColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="FB3-Z5-G0N" kind="presentation" identifier="profilePicToMood" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="wc8-4y-anS"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGu-nZ-qqv">
                                 <rect key="frame" x="145" y="470" width="88" height="30"/>
@@ -249,59 +246,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-3002.4000000000001" y="-352.17391304347831"/>
-        </scene>
-        <!--InitialMoodViewController-->
-        <scene sceneID="AxG-95-ZIZ">
-            <objects>
-                <viewController title="InitialMoodViewController" id="FB3-Z5-G0N" customClass="InitialMoodViewController" customModule="Phrasy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fP7-QA-9ut">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What best describes how you are feeling currently?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-Jm-086">
-                                <rect key="frame" x="42" y="94" width="269" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Did-VI-WVO">
-                                <rect key="frame" x="74" y="272" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mood A"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-dh-zbO">
-                                <rect key="frame" x="235" y="272" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mood B"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwQ-V7-pd6">
-                                <rect key="frame" x="231" y="375" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mood D"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlc-L3-reu">
-                                <rect key="frame" x="143" y="544" width="88" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finish Profile"/>
-                                <connections>
-                                    <action selector="createUser:" destination="FB3-Z5-G0N" eventType="touchUpInside" id="qje-Sp-rZH"/>
-                                    <segue destination="Xjd-kh-0Hl" kind="presentation" identifier="initialMoodToHome" modalPresentationStyle="fullScreen" id="bFO-la-IZs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXa-56-Rcu">
-                                <rect key="frame" x="73" y="375" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mood C"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="PGe-Rl-MOt"/>
-                        <color key="backgroundColor" red="0.21176470588235294" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SOn-Wx-OBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1434.4000000000001" y="-352.17391304347831"/>
         </scene>
         <!--PhraseEngineViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -682,9 +626,6 @@
             <point key="canvasLocation" x="-2482.4000000000001" y="2779.1604197901052"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="BXr-SY-sl8"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="banner" width="179" height="82"/>
         <image name="bubble.middle.bottom" catalog="system" width="128" height="110"/>
