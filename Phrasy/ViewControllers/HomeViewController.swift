@@ -30,7 +30,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let thisUser = PFUser.current()
         
         let query = PFQuery(className: "Follow")
-        query.whereKey("from", equalTo: thisUser!)
+        query.whereKey("from", equalTo: thisUser as Any)
         
         query.findObjectsInBackground { (friends, error) -> Void in
             if let friends = friends {
