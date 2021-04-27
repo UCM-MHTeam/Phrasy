@@ -17,6 +17,7 @@ class ProfilePicViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setGradient()
         
         // Do any additional setup after loading the view.
     }
@@ -69,5 +70,8 @@ class ProfilePicViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
-
+    func setGradient() {
+        gradient.frame = view.bounds
+        self.view.layer.insertSublayer(gradient, at: 0)
+    }
 }

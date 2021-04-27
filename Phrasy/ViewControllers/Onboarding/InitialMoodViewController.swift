@@ -24,7 +24,7 @@ class InitialMoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setGradient()
         print(" \(newUserInfo[0])  \(newUserInfo[1])  \(newUserInfo[2])  \(newUserInfo[3]) ")
 
         // Do any additional setup after loading the view.
@@ -89,5 +89,8 @@ class InitialMoodViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func setGradient() {
+        gradient.frame = view.bounds
+        self.view.layer.insertSublayer(gradient, at: 0)
+    }
 }
