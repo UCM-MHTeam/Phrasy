@@ -25,8 +25,22 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         setGradient()
         transparentNavBar()
-        self.loadFriends()
-
+//        self.loadFriends()
+        
+        let thisUser = PFUser.current()
+        
+        let query = PFQuery(className: "Follow")
+        query.whereKey("from", equalTo: thisUser!)
+        
+        query.findObjectsInBackground { (friends, error) -> Void in
+            if let friends = friends {
+                self.friends = friends
+                self.friendsView.reloadData()
+                self.refreshFriends.endRefreshing()
+            } else {
+                print("Coult not load friends")
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
