@@ -28,11 +28,11 @@ Mental health and mental illness can be tough to deal with, especially when comm
 
 **Required Must-have Stories**
 
-- [x] User can log-in
-- [x] User can register for an account
-- [x] User can view other user status' at a glance (only among friends)
-- [x] User can find friends through a query
-- [x] User can view a list of (CA-local) hotlines, wellness centers, etc
+- [ ] User can log-in
+- [ ] User can register for an account
+- [ ] User can view other user status' at a glance (only among friends)
+- [ ] User can find friends through a query
+- [ ] User can view a list of (CA-local) hotlines, wellness centers, etc
 - [x] **User can draft a message based on certain criteria**
     * Uses a survey form to suggest phrases based on their mood, intention, etc. for a message to send
 
@@ -242,12 +242,13 @@ query.findObjectsInBackground { (upCells, error) in
 ![](https://i.imgur.com/4qUmTsJ.gif)
 
 **Milestone #2**: Working Phrase Engine and Login View (to be continued to next milestone)
-
 ![](https://i.imgur.com/TxCgrNS.gif)
 ![](https://i.imgur.com/3NJGXrR.gif)
 
 **Milestone #3**: Phrase Engine polishing and Friends View (to be continued to next milestone)
-
 ![](https://i.imgur.com/dzH7Ddw.gif)
 ![](https://i.imgur.com/TY2F4DD.gif)
+
+**Milestone #4**: Home (Friends) View, Search Functionality, and design tweaking
+![](https://i.imgur.com/nGr0iDg.gif)
 
