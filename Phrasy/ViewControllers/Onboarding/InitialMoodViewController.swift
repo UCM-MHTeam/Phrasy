@@ -13,6 +13,14 @@ class InitialMoodViewController: UIViewController {
 
     var newUserInfo: [String] = []
     var newProfPic: UIImage? = nil
+    
+    var moodDictionary = ["Joyful": "#6dd396ff",
+                          "Relaxed": "#61B0E8ff",
+                          "Confused": "#D9C377ff",
+                          "Melancholy": "#9780EBff"]
+    
+    
+    var moodColorId = "#C19422FF"       //Default color
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +29,27 @@ class InitialMoodViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func moodA(_ sender: Any) {
+//        initialMood = "Joyful"
+        moodColorId = moodDictionary["Joyful"]!
+        print(moodColorId)
+    }
+    @IBAction func moodB(_ sender: Any) {
+//        initialMood = "Relaxed"
+        moodColorId = moodDictionary["Relaxed"]!
+        print(moodColorId)
+    }
+    @IBAction func moodC(_ sender: Any) {
+//        initialMood = "Confused"
+        moodColorId = moodDictionary["Confused"]!
+        print(moodColorId)
+    }
+    @IBAction func moodD(_ sender: Any) {
+//        initialMood = "Melancholy"
+        moodColorId = moodDictionary["Melancholy"]!
+        print(moodColorId)
+    }
+    
     
     @IBAction func createUser(_ sender: Any) {
         let user = PFUser()
@@ -28,6 +57,7 @@ class InitialMoodViewController: UIViewController {
         user.password = newUserInfo[3]
         user["firstname"] = newUserInfo[0]
         user["lastname"] = newUserInfo[1]
+        user["moodColorId"] = moodColorId
         
         
         

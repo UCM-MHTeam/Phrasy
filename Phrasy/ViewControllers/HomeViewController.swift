@@ -37,7 +37,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let thisUser = PFUser.current()
         
         let query = PFQuery(className: "Follow")
-        query.whereKey("from", equalTo: thisUser!)
+        query.whereKey("from", equalTo: thisUser as Any)
         
         query.findObjectsInBackground { (friends, error) -> Void in
             if let friends = friends {
@@ -74,15 +74,26 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.personNameLabel.text = firstName! + " " + lastIniital + "."
         cell.personImage.af.setImage(withURL: url)
         
+//        var moodColor = "#C19422FF"
+        
+//        if(person["moodColorId"] != nil){
+//            moodColor = (person["moodColorId"] as? String)!
+//        }
+        let moodColor = person["moodColorId"] as! String
+//        print(moodColor ?? "Fail")
+        
+        
         // Person Cell Design
-        let cellLayer = cell.layer
+//        let cellLayer = cell.layer
         cell.contentView.layer.cornerRadius = 24
-        cellLayer.shadowColor = UIColor(hex: "#C19422FF")?.cgColor
-        cellLayer.shadowOpacity = 1
-        cellLayer.shadowOffset = CGSize(width: -6.0,height: -6.0)
-        cellLayer.shadowRadius = 0.5
-        cellLayer.masksToBounds = false
-        cellLayer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+//        cellLayer.shadowColor = UIColor(hex: "#C19422FF")?.cgColor
+        cell.contentView.backgroundColor = UIColor(hex: moodColor)
+        
+//        cellLayer.shadowOpacity = 1
+//        cellLayer.shadowOffset = CGSize(width: -6.0,height: -6.0)
+//        cellLayer.shadowRadius = 0.5
+//        cellLayer.masksToBounds = false
+//        cellLayer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         let imageView = cell.personImage.layer
         imageView.cornerRadius = 0.5 * imageView.bounds.width
