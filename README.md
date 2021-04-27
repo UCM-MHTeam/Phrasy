@@ -250,5 +250,6 @@ query.findObjectsInBackground { (upCells, error) in
 ![](https://i.imgur.com/TY2F4DD.gif)
 
 **Milestone #4**: Home (Friends) View, Search Functionality, and design tweaking
+
 ![](https://i.imgur.com/nGr0iDg.gif)
 
