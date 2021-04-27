@@ -291,7 +291,6 @@
 				997B085B2634EF0C00B57B52 /* ColorHexConverter.swift in Sources */,
 				997B088626373AA300B57B52 /* BackgroundGradient.swift in Sources */,
 				994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */,
-				996E8874262C16270030E710 /* rgbToHex.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */,
 				997B08722636901A00B57B52 /* ProfilePicViewController.swift in Sources */,
@@ -445,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LB38XBJ384;
+				DEVELOPMENT_TEAM = XHF28X4N49;
 				INFOPLIST_FILE = Phrasy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LB38XBJ384;
+				DEVELOPMENT_TEAM = XHF28X4N49;
 				INFOPLIST_FILE = Phrasy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

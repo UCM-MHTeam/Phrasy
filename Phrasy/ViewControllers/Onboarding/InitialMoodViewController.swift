@@ -70,7 +70,7 @@ class InitialMoodViewController: UIViewController {
         user.signUpInBackground{ (success, error) in
             if success{
                 self.performSegue(withIdentifier: "initialMoodToHome", sender: nil)
-            }else{
+            } else {
                 print("Error: \(error?.localizedDescription)")
             }
             
