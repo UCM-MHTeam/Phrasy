@@ -16,9 +16,9 @@ Mental health and mental illness can be tough to deal with, especially when comm
 ### App Evaluation
 
 - **Category:** Health and Wellness
-- **Mobile:** The phraser system feature can be used on mobile devices and is also viable on a desktop version. Everything else seems to only be viable on mobile since features like statuses and statistics are preferred at a quick glance.
+- **Mobile:** The phrase system feature can be used on mobile devices and is also viable on a desktop version. Everything else seems to only be viable on mobile since features like statuses and statistics are preferred at a quick glance.
 - **Story:** Allows the user to form phrases when they cannot find the words themselves. Phrases include labeling emotions, declaring intentions, offering support,  etc.
-- **Market:** General audience of all ages 4+
+- **Market:** College/university students and young adults ages 17+
 - **Habit:** Main functionality is not habit based, however mood tracking will heavily rely on it.
 - **Scope:** Focal point is the message phraser first, which can require additional help from professionals and online sources to create phrases for effective communication.
 
