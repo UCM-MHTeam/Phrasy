@@ -1,4 +1,4 @@
-# Phrasy - iOS Mental Wellness App (WIP)
+# Phrasy - iOS Original App
 
 ## Table of Contents
 1. [Overview](#Overview)
