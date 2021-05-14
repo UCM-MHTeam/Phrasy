@@ -26,7 +26,7 @@ Mental health and mental illness can be tough to deal with, especially when comm
 
 ### 1. User Stories (Required and Optional)
 
-**Required Must-have Stories**
+**Required Stories**
 
 - [x] User can log-in
 - [x] User can register for an account
@@ -79,13 +79,13 @@ Mental health and mental illness can be tough to deal with, especially when comm
 ### First Draft
 ![](https://i.imgur.com/Ujfhr04.jpg) </img>
 
-### [BONUS] Digital Wireframes & Mockups ([Figma Link](https://www.figma.com/file/0RJG7CmvWGkx2tHmbDKAQ8/CodePath-iOS-MH-App?node-id=0%3A1))
+### Digital Wireframes & Mockups ([Figma Link](https://www.figma.com/file/0RJG7CmvWGkx2tHmbDKAQ8/CodePath-iOS-MH-App?node-id=0%3A1))
 > Below the Message frame, we plan on implementing there a form that can take the user's current feeling/intention and creates a phrase to be sent out.
 
 ![](https://i.imgur.com/AHLQTZR.png)
 
 
-### [BONUS] Interactive Prototype ([Figma Preview Link](https://www.figma.com/proto/0RJG7CmvWGkx2tHmbDKAQ8/CodePath-iOS-MH-App?node-id=7%3A34&scaling=scale-down))
+### Interactive Prototype ([Figma Preview Link](https://www.figma.com/proto/0RJG7CmvWGkx2tHmbDKAQ8/CodePath-iOS-MH-App?node-id=7%3A34&scaling=scale-down))
 ![](https://i.imgur.com/U3GVE9x.gif)
 
 
@@ -242,10 +242,12 @@ query.findObjectsInBackground { (upCells, error) in
 ![](https://i.imgur.com/4qUmTsJ.gif)
 
 **Milestone #2**: Working Phrase Engine and Login View (to be continued to next milestone)
+
 ![](https://i.imgur.com/TxCgrNS.gif)
 ![](https://i.imgur.com/3NJGXrR.gif)
 
 **Milestone #3**: Phrase Engine polishing and Friends View (to be continued to next milestone)
+
 ![](https://i.imgur.com/dzH7Ddw.gif)
 ![](https://i.imgur.com/TY2F4DD.gif)
 
