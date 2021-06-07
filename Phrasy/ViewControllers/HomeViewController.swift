@@ -40,6 +40,21 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 print("Coult not load friends")
             }
         }
+        
+        if thisUser != nil {
+            print("\(thisUser!["firstname"] ?? "firstname") \(thisUser!["lastname"] ?? "lastname") \(thisUser!["username"] ?? "username")" )
+        } else {
+          // Show the signup or login screen
+            print("thisUser == nil :(")
+        }
+//        PFUser.become(inBackground: sessionKey) { (thisUser, error) in
+//            if error != nil {
+//                print("error")
+//            } else {
+//
+//              // The current user is now set to user.
+//            }
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

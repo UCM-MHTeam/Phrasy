@@ -33,10 +33,14 @@ class PhraseEngineViewController: UIViewController {
     
     func createImageURL() {
         let thisUser = PFUser.current()
-        let profImage = thisUser!["profilePhoto"] as! PFFileObject
-        let urlString = profImage.url!
-        let url = URL(string: urlString)!
-        self.personImage.af.setImage(withURL: url)
+        let profImage = thisUser!["profilePhoto"] as? PFFileObject
+        
+        if profImage != nil {
+            let urlString = profImage?.url!
+            let url = URL(string: urlString!)!
+            self.personImage.af.setImage(withURL: url)
+        }
+
     }
     
     @IBAction func formPhrase(_ sender: Any) {

@@ -67,13 +67,14 @@ class InitialMoodViewController: UIViewController {
         
         user["profilePhoto"] = file
         user["friends"] = friendsArray
-        user.signUpInBackground{ (success, error) in
-            if success{
-                self.performSegue(withIdentifier: "initialMoodToHome", sender: nil)
+        user.signUpInBackground{ (succeeded: Bool, error: Error?) -> Void in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+
             } else {
-                print("Error: \(error?.localizedDescription)")
+                print("success!")
+                self.performSegue(withIdentifier: "moodToHome", sender: nil)
             }
-            
         }
         
         
