@@ -9,47 +9,32 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class InitialMoodViewController: UIViewController {
+class InitialMoodViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    var newUserInfo: [String] = []
+    var moodDictionary = [ "I'm doing great!\n\nIn the mood to chat with friends": "#6dd396ff",
+          "Somewhat overwhelmed.\n\nIn need of some space for a while.": "#61B0E8ff",
+          "Been thinking a lot lately\n\nWould like to vent.": "#D9C377ff",
+          "I'm alright!\n\nNot much for chatting but would like some company!": "#9780EBff"]
+    
+//    var newUserInfo: [String] = []
+    var newUserInfo: [String] = ["first", "last", "username", "password"]
     var newProfPic: UIImage? = nil
-    
-    var moodDictionary = ["Joyful": "#6dd396ff",
-                          "Relaxed": "#61B0E8ff",
-                          "Confused": "#D9C377ff",
-                          "Melancholy": "#9780EBff"]
-    
-    
     var moodColorId = "#C19422FF"       //Default color
 
+    @IBOutlet weak var moodView: UICollectionView!
+    
     override func viewDidLoad() {
+        
+        moodView.delegate = self
+        moodView.dataSource = self
+        
         super.viewDidLoad()
+        
         setGradient()
         print(" \(newUserInfo[0])  \(newUserInfo[1])  \(newUserInfo[2])  \(newUserInfo[3]) ")
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func moodA(_ sender: Any) {
-//        initialMood = "Joyful"
-        moodColorId = moodDictionary["Joyful"]!
-        print(moodColorId)
-    }
-    @IBAction func moodB(_ sender: Any) {
-//        initialMood = "Relaxed"
-        moodColorId = moodDictionary["Relaxed"]!
-        print(moodColorId)
-    }
-    @IBAction func moodC(_ sender: Any) {
-//        initialMood = "Confused"
-        moodColorId = moodDictionary["Confused"]!
-        print(moodColorId)
-    }
-    @IBAction func moodD(_ sender: Any) {
-//        initialMood = "Melancholy"
-        moodColorId = moodDictionary["Melancholy"]!
-        print(moodColorId)
-    }
-    
     
     @IBAction func createUser(_ sender: Any) {
         let user = PFUser()
@@ -59,11 +44,9 @@ class InitialMoodViewController: UIViewController {
         user["lastname"] = newUserInfo[1]
         user["moodColorId"] = moodColorId
         
-        
-        
         let imageData =  newProfPic?.jpegData(compressionQuality: 0.5)
         let file = PFFileObject(name: "image.png", data: imageData!)
-        let friendsArray = [[PFObject]]()                           //pf objects to establish friendship
+        let friendsArray = [[PFObject]]()  //pf objects to establish friendship
         
         user["profilePhoto"] = file
         user["friends"] = friendsArray
@@ -76,20 +59,27 @@ class InitialMoodViewController: UIViewController {
                 self.performSegue(withIdentifier: "moodToHome", sender: nil)
             }
         }
-        
-        
-        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return moodDictionary.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = moodView.dequeueReusableCell(withReuseIdentifier: "MoodCell", for: indexPath) as! MoodCell
+        
+        cell.contentView.layer.cornerRadius = 24
+        
+        let moodColor = String(Array(moodDictionary)[indexPath.row].value)
+        cell.contentView.backgroundColor = UIColor(hex: moodColor)
+        
+        let keyArray = Array(moodDictionary.keys)
+        cell.moodLabel.text = keyArray[indexPath.row]
+
+        return cell
+    }
+    
     func setGradient() {
         gradient.frame = view.bounds
         self.view.layer.insertSublayer(gradient, at: 0)
