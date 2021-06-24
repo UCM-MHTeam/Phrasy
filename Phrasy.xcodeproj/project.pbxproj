@@ -18,6 +18,7 @@
 		99182010261AE00F0084CA33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918200F261AE00F0084CA33 /* SceneDelegate.swift */; };
 		99182015261AE00F0084CA33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99182013261AE00F0084CA33 /* Main.storyboard */; };
 		991CF1712683DD8F0034E33F /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CF1702683DD8F0034E33F /* MoodCell.swift */; };
+		99383DCD268433D500938610 /* AdjustColorBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99383DCC268433D500938610 /* AdjustColorBrightness.swift */; };
 		994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A47152627B86B008A6D56 /* LoginViewController.swift */; };
 		995295E22637E637007FBFC7 /* QuestionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995295E12637E637007FBFC7 /* QuestionList.swift */; };
 		996E8878262C21E70030E710 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E8877262C21E70030E710 /* PersonCell.swift */; };
@@ -47,6 +48,7 @@
 		99182014261AE00F0084CA33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9918201B261AE0140084CA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991CF1702683DD8F0034E33F /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
+		99383DCC268433D500938610 /* AdjustColorBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustColorBrightness.swift; sourceTree = "<group>"; };
 		994A47152627B86B008A6D56 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		995295E12637E637007FBFC7 /* QuestionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionList.swift; sourceTree = "<group>"; };
 		996E8877262C21E70030E710 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				997B085A2634EF0C00B57B52 /* ColorHexConverter.swift */,
 				995295E12637E637007FBFC7 /* QuestionList.swift */,
 				997B088526373AA300B57B52 /* BackgroundGradient.swift */,
+				99383DCC268433D500938610 /* AdjustColorBrightness.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				994A47162627B86B008A6D56 /* LoginViewController.swift in Sources */,
 				9918200E261AE00F0084CA33 /* AppDelegate.swift in Sources */,
 				312B4DC4261AF4CC007E22B9 /* QuestionCell.swift in Sources */,
+				99383DCD268433D500938610 /* AdjustColorBrightness.swift in Sources */,
 				997B08722636901A00B57B52 /* ProfilePicViewController.swift in Sources */,
 				99B010EE261E5545006A53CF /* AnswerChoiceCell.swift in Sources */,
 				31E9D66D261AED7600BA6D6A /* PhraseEngineViewController.swift in Sources */,

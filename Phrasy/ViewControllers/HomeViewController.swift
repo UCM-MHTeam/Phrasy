@@ -113,16 +113,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         
         // Person Cell Design
-//        let cellLayer = cell.layer
+        let cellLayer = cell.layer
         cell.contentView.layer.cornerRadius = 24
-//        cellLayer.shadowColor = UIColor(hex: "#C19422FF")?.cgColor
+        
+        let cellColor = UIColor(hex: moodColor!)!.darker(by: 30)
+        cellLayer.shadowColor = cellColor?.cgColor
+        
         cell.contentView.backgroundColor = UIColor(hex: moodColor!)
         
-//        cellLayer.shadowOpacity = 1
-//        cellLayer.shadowOffset = CGSize(width: -6.0,height: -6.0)
-//        cellLayer.shadowRadius = 0.5
-//        cellLayer.masksToBounds = false
-//        cellLayer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        cellLayer.shadowOpacity = 1
+        cellLayer.shadowOffset = CGSize(width: 6.0,height: 6.0)
+        cellLayer.shadowRadius = 0.5
+        cellLayer.masksToBounds = false
+        cellLayer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         let imageView = cell.personImage.layer
         imageView.cornerRadius = 0.5 * imageView.bounds.width
