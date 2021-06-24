@@ -81,13 +81,14 @@ Mental health and mental illness can be tough to deal with, especially when comm
 ### First Draft
 ![](https://i.imgur.com/Ujfhr04.jpg) </img>
 
-### Digital Wireframes & Mockups ([Figma Link](https://www.figma.com/file/0RJG7CmvWGkx2tHmbDKAQ8/CodePath-iOS-MH-App?node-id=0%3A1))
+
+### Digital Wireframes & Mockups
 > Below the Message frame, we plan on implementing there a form that can take the user's current feeling/intention and creates a phrase to be sent out.
 
 ![](https://i.imgur.com/AHLQTZR.png)
 
 
-### Interactive Prototype ([Figma Preview Link](https://www.figma.com/proto/0RJG7CmvWGkx2tHmbDKAQ8/CodePath-iOS-MH-App?node-id=7%3A34&scaling=scale-down))
+### Interactive Prototype
 ![](https://i.imgur.com/U3GVE9x.gif)
 
 
