@@ -12,6 +12,7 @@ import AlamofireImage
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
 
     @IBOutlet weak var friendsView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let refreshFriends = UIRefreshControl()
     
     var friends = [PFObject]()
@@ -22,39 +23,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         friendsView.delegate = self
         refreshFriends.addTarget(self, action: #selector(loadFriends), for: .valueChanged)
         friendsView.refreshControl = refreshFriends
-        
         transparentNavBar()
-//        self.loadFriends()
         
-        let thisUser = PFUser.current()
-        
-        let query = PFQuery(className: "Follow")
-        query.whereKey("from", equalTo: thisUser as Any)
-        
-        query.findObjectsInBackground { (friends, error) -> Void in
-            if let friends = friends {
-                self.friends = friends
-                self.friendsView.reloadData()
-                self.refreshFriends.endRefreshing()
-            } else {
-                print("Coult not load friends")
-            }
-        }
-        
-        if thisUser != nil {
-            print("\(thisUser!["firstname"] ?? "firstname") \(thisUser!["lastname"] ?? "lastname") \(thisUser!["username"] ?? "username")" )
-        } else {
-          // Show the signup or login screen
-            print("thisUser == nil :(")
-        }
-//        PFUser.become(inBackground: sessionKey) { (thisUser, error) in
-//            if error != nil {
-//                print("error")
-//            } else {
-//
-//              // The current user is now set to user.
-//            }
-//        }
+        activityIndicator.startAnimating()
+        self.loadFriends()
+        activityIndicator.stopAnimating()
+        activityIndicator.hidesWhenStopped = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -103,14 +77,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.personNameLabel.text = firstName! + " " + lastIniital + "."
         cell.personImage.af.setImage(withURL: url)
         
-//        var moodColor = "#C19422FF"
         
         var moodColor = person["moodColorId"] as? String
         if moodColor == nil {
             moodColor = "#FF0000FF"
         }
-//        print(moodColor ?? "Fail")
-        
         
         // Person Cell Design
         let cellLayer = cell.layer
