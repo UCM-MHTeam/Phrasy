@@ -1,5 +1,7 @@
 # Phrasy - iOS Original App
 
+![](https://i.imgur.com/S9w0jzf.png)
+
 ## Table of Contents
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
