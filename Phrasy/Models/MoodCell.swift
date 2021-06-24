@@ -11,5 +11,4 @@ class MoodCell: UICollectionViewCell {
     
     @IBOutlet weak var moodLabel: UILabel!
     
-    
 }

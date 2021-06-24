@@ -61,6 +61,7 @@ class InitialMoodViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return moodDictionary.count
     }
@@ -78,6 +79,14 @@ class InitialMoodViewController: UIViewController, UICollectionViewDelegate, UIC
         cell.moodLabel.text = keyArray[indexPath.row]
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let mood = Array(moodDictionary)[indexPath.row]
+        moodColorId = String(mood.value)
+        print("Color set to \(moodColorId)")
+        
     }
     
     func setGradient() {
