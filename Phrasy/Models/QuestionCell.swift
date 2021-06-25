@@ -79,9 +79,6 @@ extension PhraseEngineViewController: UICollectionViewDelegate, UICollectionView
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius: cell.layer.cornerRadius).cgPath
         
-        
-        
-        
         return cell
     }
 }

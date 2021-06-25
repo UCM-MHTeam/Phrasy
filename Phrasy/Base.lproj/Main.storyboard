@@ -504,7 +504,7 @@
                             <constraint firstItem="gn7-lK-z7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="yYR-cW-UUM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="BbL-X0-rwD"/>
+                    <tabBarItem key="tabBarItem" title="Draft" image="ellipses.bubble" catalog="system" id="BbL-X0-rwD"/>
                     <navigationItem key="navigationItem" title="Message Draft" id="SBa-W6-lu7"/>
                     <connections>
                         <outlet property="formPhraseButton" destination="fbT-ZI-Co0" id="kK4-EM-HXW"/>
@@ -768,6 +768,7 @@
         <image name="banner" width="179" height="82"/>
         <image name="darker-message-box" width="218" height="93"/>
         <image name="dummy-message-bar" width="338" height="43"/>
+        <image name="ellipses.bubble" catalog="system" width="128" height="110"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="image_placeholder" width="375" height="375"/>

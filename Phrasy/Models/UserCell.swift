@@ -28,21 +28,20 @@ class UserCell: UITableViewCell {
         do{
 
 //             Debug: change "ID" to a preexisting UserID in Parse
-                        let targetUser = try PFQuery.getUserObject(withId: userID)
-                        print(targetUser.username ?? "not found :(")
-                        print(thisUser?.username ?? "not found :(")
+            let targetUser = try PFQuery.getUserObject(withId: userID)
+            print(targetUser.username ?? "not found :(")
+            print(thisUser?.username ?? "not found :(")
 
-                        let follow = PFObject(className: "Follow")
-                        let followback = PFObject(className: "Follow")
+            let follow = PFObject(className: "Follow")
+            let followback = PFObject(className: "Follow")
 
-                        follow.setObject(thisUser!, forKey: "from")
-                        follow.setObject(targetUser, forKey: "to")
-                        follow.saveInBackground()
+            follow.setObject(thisUser!, forKey: "from")
+            follow.setObject(targetUser, forKey: "to")
+            follow.saveInBackground()
 
-                        followback.setObject(targetUser, forKey: "from")
-                        followback.setObject(thisUser!, forKey: "to")
-                        followback.saveInBackground()
-
+            followback.setObject(targetUser, forKey: "from")
+            followback.setObject(thisUser!, forKey: "to")
+            followback.saveInBackground()
         } catch {
             print(error)
         }
